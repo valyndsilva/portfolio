@@ -1,23 +1,47 @@
-# Next.js + Tailwind CSS Example
+npx create-next-app --example with-tailwindcss portfolio
+sudo npm install -g @sanity/cli
+sanity init
+Create new project: portfolio
+Project output path:sanity-studio
+cd sanity-studio
+sanity start
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+In another terminal:
+npm run dev
 
-## Deploy your own
+Setup darkMode:
+npm install next-themes
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+In index.js:
+import { useTheme } from "next-themes";
+const { theme, setTheme } = useTheme();
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+// To fix hydration UI mismatch issues, we need to wait until the component has mounted.
+const [mounted, setMounted] = useState(false);
+useEffect(() => {
+setMounted(true);
+}, []);
+if (!mounted) return null;
 
-## How to use
+In tailwind.config.js:
+add the line: darkMode: "class",
+Then use dark: in classNames as needed.
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+Setup Custom Fonts:
+Download google font in woff2 format.
+Save the font file in /public/fonts/
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-# or
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
+In tailwind.config.js:
+theme: {
+extend: {
+fontFamily: {
+pacifico: "Pacifico, cursive",
+},
+},
+},
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+To use in files "font-pacifico"
+
+Custom 'Document' file:
+create \_document.js in pages folder
+https://nextjs.org/docs/advanced-features/custom-document
