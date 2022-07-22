@@ -45,3 +45,7 @@ To use in files "font-pacifico"
 Custom 'Document' file:
 create \_document.js in pages folder
 https://nextjs.org/docs/advanced-features/custom-document
+
+npm install react-icons
+npm install react-reveal
+npm install -D postcss-nesting

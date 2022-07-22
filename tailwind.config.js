@@ -4,7 +4,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        pacifico: "Pacifico, cursive",
+        inter: "Inter, sans-serif",
+        firacode: "Fira Code, monospace",
+        satisfy: "Satisfy, cursive",
+        firamono: "Fira Mono, monospace",
       },
     },
   },

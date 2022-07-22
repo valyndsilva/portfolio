@@ -1,17 +1,17 @@
-import ToggleButton from "../components/ToggleButton";
+import Fade from "react-reveal/Fade";
 
 const Hero = () => {
   return (
-    <section className="mt-16">
-      <h1 className="text-7xl font-bold">
-        Hi I'm <span className="dark:text-purple-600">Valyn</span>
-      </h1>
-      <h3 className="text-4xl my-3">I am Web Designer</h3>
-      <p className="text-gray-700 mb-8">UI/UX Designer & Front-End Developer</p>
-      <ToggleButton className="bg-purple-600 text-white px-6">
-        Hire Me!
-      </ToggleButton>
-    </section>
+    <Fade bottom duration={2800}>
+      <section className="flex flex-col min-h-screen justify-center">
+        <h1 className="text-7xl font-bold">
+          <span className="dark:text-teal-400 font-satisfy">Valyn Silva</span>
+        </h1>
+        <h3 className="text-2xl my-3 dark:text-slate-400 font-firacode">
+          UI/UX Designer | Front-End Developer
+        </h3>
+      </section>
+    </Fade>
   );
 };
 

@@ -3,15 +3,51 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behaviour: smooth;
+  }
+  ::-webkit-scrollbar {
+    @apply hidden;
+  }
   body {
     /* @apply max-w-2xl mx-auto px-4; */
     /* @apply dark:bg-black dark:text-gray-100 bg-gray-50 text-gray-900; */
   }
+  section {
+    height: 100vh;
+  }
   @font-face {
-    font-family: "Pacifico";
-    src: url("/fonts/Pacifico-Regular.woff2") format("woff2");
+    font-family: "Inter";
+    src: url("/fonts/Inter-VariableFont_slnt,wght.woff2") format("woff2");
     font-display: swap;
     font-style: normal;
     font-weight: 400;
+  }
+  @font-face {
+    font-family: "FiraCode";
+    src: url("/fonts/FiraCode-VariableFont_wght.woff2") format("woff2");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: "Satisfy";
+    src: url("/fonts/Satisfy-Regular.woff2") format("woff2");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .verticalLine {
+    @apply after:block after:mt-5 after:h-[90px] after:w-[1px] after:mx-auto after:bg-white;
+  }
+
+  .verticalMode {
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+  }
+
+  .socialIcons {
+    @apply w-5 h-5 cursor-pointer hover:dark:text-teal-400 hover:-translate-y-0.5 transition duration-100 ease-in;
   }
 }
