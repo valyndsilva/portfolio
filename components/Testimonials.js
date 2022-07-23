@@ -1,7 +1,11 @@
 import React from "react";
 
-function Testimonials() {
-  return <section id="testimonials">Testimonials</section>;
+function Testimonials({ testimonialsRef }) {
+  return (
+    <section className="section" id="testimonials" ref={testimonialsRef}>
+      Testimonials
+    </section>
+  );
 }
 
 export default Testimonials;

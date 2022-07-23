@@ -3,8 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+  .selected {
+    @apply text-teal-400;
+  }
   html {
-    scroll-behaviour: smooth;
+    @apply scroll-smooth;
   }
   ::-webkit-scrollbar {
     @apply hidden;
@@ -12,6 +15,7 @@
   body {
     /* @apply max-w-2xl mx-auto px-4; */
     /* @apply dark:bg-black dark:text-gray-100 bg-gray-50 text-gray-900; */
+    @apply scroll-smooth;
   }
   section {
     height: 100vh;

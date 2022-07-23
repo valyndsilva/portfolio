@@ -1,12 +1,31 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
-import { MdOutlineWork } from "react-icons/md";
+import { BsFillSunFill, BsFillMoonStarsFill } from "react-icons/bs";
 import { RiServiceLine } from "react-icons/ri";
 import { BiMessageSquareDetail } from "react-icons/bi";
-import { BsFillSunFill, BsFillMoonStarsFill } from "react-icons/bs";
-function Nav() {
+import { AiOutlineHome, AiOutlineUser, AiOutlineMessage } from "react-icons/ai";
+import { MdWorkOutline, MdOutlineDesignServices } from "react-icons/md";
+function Nav({
+  clickedNav,
+  setClickedNav,
+  visibleSection,
+  selected,
+  hero,
+  about,
+  experience,
+  services,
+  portfolio,
+  testimonials,
+  contact,
+  heroRef,
+  aboutRef,
+  experienceRef,
+  servicesRef,
+  portfolioRef,
+  testimonialsRef,
+  contactRef,
+}) {
   const { systemTheme, theme, setTheme } = useTheme();
 
   // To fix hydration UI mismatch issues, we need to wait until the component has mounted.
@@ -41,22 +60,93 @@ function Nav() {
   };
 
   return (
-    <nav className="fixed bottom-8 z-20 shadow-xl bg-slate-300 dark:bg-slate-600 px-5 py-3 rounded-full opacity-30 hover:opacity-100">
+    <nav className="fixed bottom-8 z-20 shadow-xl bg-slate-300 dark:bg-slate-600 px-5 py-3 rounded-full opacity-30 hover:opacity-100 transition ease-in duration-100">
       <div className="flex space-x-4 ">
-        <Link href="#">
-          <AiOutlineHome className="w-5 h-5 cursor-pointer" />
+        <Link href="#hero">
+          <a>
+            <AiOutlineHome
+              className={` ${visibleSection === hero && "selected"} 
+               w-6 h-6 cursor-pointer`}
+              onClick={() => {
+                setClickedNav("hero");
+                scrollTo(heroRef.current);
+              }}
+            />
+          </a>
         </Link>
         <Link href="#about">
-          <AiOutlineUser className="w-5 h-5 cursor-pointer" />
+          <a>
+            <AiOutlineUser
+              className={`${visibleSection === about && "selected"} 
+                w-6 h-6 cursor-pointer`}
+              onClick={() => {
+                setClickedNav("about");
+                scrollTo(aboutRef.current);
+              }}
+            />
+          </a>
+        </Link>
+        <Link href="#services">
+          <a>
+            <MdOutlineDesignServices
+              className={` ${visibleSection === services && "selected"} 
+              w-6 h-6 cursor-pointer`}
+              onClick={() => {
+                setClickedNav("services");
+                scrollTo(servicesRef.current);
+              }}
+            />
+          </a>
         </Link>
         <Link href="#experience">
-          <MdOutlineWork className="w-5 h-5 cursor-pointer" />
+          <a>
+            <MdWorkOutline
+              className={` ${
+                visibleSection === experience && "selected"
+              }  w-6 h-6 cursor-pointer`}
+              onClick={() => {
+                setClickedNav("experience");
+                scrollTo(experienceRef.current);
+              }}
+            />
+          </a>
         </Link>
-        <Link href="#portfolio">
-          <RiServiceLine className="w-5 h-5 cursor-pointer" />
+        <a href="#portfolio">
+          <RiServiceLine
+            className={` ${
+              visibleSection === portfolio && "selected"
+            } w-6 h-6 cursor-pointer`}
+            onClick={() => {
+              setClickedNav("portfolio");
+              scrollTo(portfolioRef.current);
+            }}
+          />
+        </a>
+        <Link href="#testimonials">
+          <a>
+            <BiMessageSquareDetail
+              className={` ${
+                visibleSection === testimonials && selected
+              }  w-6 h-6 cursor-pointer`}
+              onClick={() => {
+                setClickedNav("testimonials");
+                scrollTo(testimonialsRef.current);
+              }}
+            />
+          </a>
         </Link>
         <Link href="#contact">
-          <BiMessageSquareDetail className="w-5 h-5 cursor-pointer" />
+          <a>
+            <AiOutlineMessage
+              className={` ${
+                visibleSection === contact && "selected"
+              } w-6 h-6 cursor-pointer`}
+              onClick={() => {
+                setClickedNav("contact");
+                scrollTo(contactRef.current);
+              }}
+            />
+          </a>
         </Link>
         {renderThemeChanger()}
       </div>
@@ -65,3 +155,5 @@ function Nav() {
 }
 
 export default Nav;
+
+export async function getStaticProps(context) {}

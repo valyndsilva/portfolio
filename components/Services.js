@@ -1,7 +1,11 @@
 import React from "react";
 
-function Services() {
-  return <section id="services">Services</section>;
+function Services({ servicesRef }) {
+  return (
+    <section className="section" id="services" ref={servicesRef}>
+      Services
+    </section>
+  );
 }
 
 export default Services;

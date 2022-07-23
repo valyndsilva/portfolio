@@ -1,7 +1,11 @@
 import React from "react";
 
-function About() {
-  return <section id="about">About</section>;
+function About({ aboutRef }) {
+  return (
+    <section className="section" id="about" ref={aboutRef}>
+      About
+    </section>
+  );
 }
 
 export default About;
