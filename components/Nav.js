@@ -45,7 +45,10 @@ function Nav({
 
     if (currentTheme === "dark") {
       return (
-        <BsFillSunFill className="h-6 w-6" onClick={() => setTheme("light")} />
+        <BsFillSunFill
+          className="h-6 w-6 cursor-pointer"
+          onClick={() => setTheme("light")}
+        />
       );
     } else {
       return (
