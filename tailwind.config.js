@@ -9,6 +9,9 @@ module.exports = {
         satisfy: "Satisfy, cursive",
         firamono: "Fira Mono, monospace",
       },
+      backgroundImage: {
+        projects: "url('/public/images/projects.png')",
+      },
     },
   },
   variants: {},

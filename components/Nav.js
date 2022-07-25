@@ -5,7 +5,7 @@ import { BsFillSunFill, BsFillMoonStarsFill } from "react-icons/bs";
 import { RiServiceLine } from "react-icons/ri";
 import { BiMessageSquareDetail } from "react-icons/bi";
 import { AiOutlineHome, AiOutlineUser, AiOutlineMessage } from "react-icons/ai";
-import { MdWorkOutline, MdOutlineDesignServices } from "react-icons/md";
+import { MdWorkOutline } from "react-icons/md";
 function Nav({
   clickedNav,
   setClickedNav,
@@ -14,14 +14,12 @@ function Nav({
   hero,
   about,
   experience,
-  services,
   portfolio,
   testimonials,
   contact,
   heroRef,
   aboutRef,
   experienceRef,
-  servicesRef,
   portfolioRef,
   testimonialsRef,
   contactRef,
@@ -47,12 +45,12 @@ function Nav({
 
     if (currentTheme === "dark") {
       return (
-        <BsFillSunFill className="h-5 w-5" onClick={() => setTheme("light")} />
+        <BsFillSunFill className="h-6 w-6" onClick={() => setTheme("light")} />
       );
     } else {
       return (
         <BsFillMoonStarsFill
-          className="h-5 w-5"
+          className="h-6 w-6 cursor-pointer"
           onClick={() => setTheme("dark")}
         />
       );
@@ -60,7 +58,7 @@ function Nav({
   };
 
   return (
-    <nav className="fixed bottom-8 z-20 shadow-xl bg-slate-300 dark:bg-slate-600 px-5 py-3 rounded-full opacity-30 hover:opacity-100 transition ease-in duration-100">
+    <nav className="fixed bottom-8 z-30 shadow-xl bg-slate-300 dark:bg-slate-600 px-5 py-3 rounded-full opacity-30 hover:opacity-100 transition ease-in duration-100">
       <div className="flex space-x-4 ">
         <Link href="#hero">
           <a>
@@ -86,18 +84,7 @@ function Nav({
             />
           </a>
         </Link>
-        <Link href="#services">
-          <a>
-            <MdOutlineDesignServices
-              className={` ${visibleSection === services && "selected"} 
-              w-6 h-6 cursor-pointer`}
-              onClick={() => {
-                setClickedNav("services");
-                scrollTo(servicesRef.current);
-              }}
-            />
-          </a>
-        </Link>
+
         <Link href="#experience">
           <a>
             <MdWorkOutline
