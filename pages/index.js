@@ -111,7 +111,9 @@ const Home = () => {
         selected="selected"
         heroRef={heroRef}
         aboutRef={aboutRef}
+        servicesRef={servicesRef}
         experienceRef={experienceRef}
+        educationRef={educationRef}
         portfolioRef={portfolioRef}
         testimonialsRef={testimonialsRef}
         contactRef={contactRef}

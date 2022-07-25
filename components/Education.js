@@ -3,7 +3,7 @@ import Timeline from "./Timeline";
 import TimelineLeft from "./TimelineLeft";
 function Education({ educationRef }) {
   return (
-    <section className="section" id="experience" ref={educationRef}>
+    <section className="section" id="education" ref={educationRef}>
       <div class="text-center mb-20">
         <h1 class="font-inter font-semibold dark:text-slate-300 text-5xl mb-4">
           What I've Studied?
@@ -26,7 +26,6 @@ function Education({ educationRef }) {
           companyName="London Academy Of IT"
           // jobDescription="lorem ipsum dolor sit amet, consect"
         />
-
 
         <TimelineLeft
           jobTitle="Electronics & Telecommunication Engineering"

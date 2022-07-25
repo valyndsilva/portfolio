@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { BsFillSunFill, BsFillMoonStarsFill } from "react-icons/bs";
 import { RiServiceLine } from "react-icons/ri";
-import { BiMessageSquareDetail,BiBook } from "react-icons/bi";
+import { BiMessageSquareDetail, BiBook } from "react-icons/bi";
 import { AiOutlineHome, AiOutlineUser, AiOutlineMessage } from "react-icons/ai";
 import { MdOutlineMiscellaneousServices, MdWorkOutline } from "react-icons/md";
 function Nav({
@@ -21,7 +21,9 @@ function Nav({
   contact,
   heroRef,
   aboutRef,
+  servicesRef,
   experienceRef,
+  educationRef,
   portfolioRef,
   testimonialsRef,
   contactRef,
@@ -98,7 +100,7 @@ function Nav({
               }  w-6 h-6 cursor-pointer`}
               onClick={() => {
                 setClickedNav("services");
-                scrollTo(serviceseRef.current);
+                scrollTo(servicesRef.current);
               }}
             />
           </a>
