@@ -2,12 +2,15 @@ import { useEffect, useRef, useState } from "react";
 import {
   Hero,
   About,
+  Services,
   Experience,
   Portfolio,
   Testimonials,
   Contact,
   Nav,
   SideNav,
+  Footer,
+  Education,
 } from "../components";
 
 const getDimensions = (ele) => {
@@ -35,7 +38,9 @@ const Home = () => {
 
   const heroRef = useRef(null);
   const aboutRef = useRef(null);
+  const servicesRef = useRef(null);
   const experienceRef = useRef(null);
+  const educationRef = useRef(null);
   const portfolioRef = useRef(null);
   const testimonialsRef = useRef(null);
   const contactRef = useRef(null);
@@ -43,7 +48,9 @@ const Home = () => {
   const sectionRefs = [
     { section: "hero", ref: heroRef },
     { section: "about", ref: aboutRef },
+    { section: "services", ref: servicesRef },
     { section: "experience", ref: experienceRef },
+    { section: "education", ref: educationRef },
     { section: "portfolio", ref: portfolioRef },
     { section: "testimonials", ref: testimonialsRef },
     { section: "contact", ref: contactRef },
@@ -95,6 +102,7 @@ const Home = () => {
         visibleSection={visibleSection}
         hero="hero"
         about="about"
+        education="education"
         experience="experience"
         services="services"
         portfolio="portfolio"
@@ -109,10 +117,13 @@ const Home = () => {
         contactRef={contactRef}
       />
       <About aboutRef={aboutRef} />
+      <Services servicesRef={servicesRef} />
       <Experience experienceRef={experienceRef} />
+      <Education educationRef={educationRef} />
       <Portfolio portfolioRef={portfolioRef} />
       <Testimonials testimonialsRef={testimonialsRef} />
       <Contact contactRef={contactRef} />
+      <Footer />
     </div>
   );
 };

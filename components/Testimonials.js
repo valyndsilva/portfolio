@@ -12,19 +12,20 @@ import "swiper/css/autoplay";
 
 function Testimonials({ testimonialsRef }) {
   return (
-    <section
-      className="section w-[80vw] mt-5 z-20 text-gray-600 body-font"
-      id="testimonials"
-      ref={testimonialsRef}
-    >
-      <h2 className="text-left text-4xl font-semibold font-inter dark:text-slate-300">
-        <span className="text-teal-400 text-4xl font-firacode font-light mr-2">
-          03.
-        </span>
-        What Clients Say About Working With Me
-      </h2>
+    <section className="section" id="testimonials" ref={testimonialsRef}>
+      <div class="text-center">
+        <h1 class="font-inter font-semibold dark:text-slate-300 text-5xl mb-4">
+          What Clients Say About Working With Me
+        </h1>
+        <p class="font-firacode text-md dark:text-slate-400 xl:w-2/4 lg:w-3/4 mx-auto">
+          Blue bottle crucifix vinyl post-ironic four dollar toast
+        </p>
+        <div class="flex mt-6 justify-center">
+          <div class="w-16 h-1 rounded-full bg-teal-400 inline-flex"></div>
+        </div>
+      </div>
       <Swiper
-        className="pt-24 pb-10"
+        className="pt-10 pb-10 w-[70vw] md:w-[80vw]"
         // install Swiper modules
         modules={[Navigation, Pagination, Autoplay]}
         loop={true}

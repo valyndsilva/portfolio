@@ -3,9 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  .selected {
-    @apply text-teal-400;
-  }
   html {
     @apply scroll-smooth;
   }
@@ -17,9 +14,7 @@
     /* @apply dark:bg-black dark:text-gray-100 bg-gray-50 text-gray-900; */
     @apply scroll-smooth;
   }
-  section {
-    height: 100vh;
-  }
+
   @font-face {
     font-family: "Inter";
     src: url("/fonts/Inter-VariableFont_slnt,wght.woff2") format("woff2");
@@ -41,6 +36,12 @@
     font-style: normal;
     font-weight: 400;
   }
+  .section {
+    @apply h-full w-[80vw] min-h-screen justify-center items-center z-20 mb-20;
+  }
+  .selected {
+    @apply text-teal-400;
+  }
 
   .verticalLine {
     @apply after:block after:mt-5 after:h-[90px] after:w-[1px] after:mx-auto after:bg-white;
@@ -57,5 +58,18 @@
 
   .swiper .swiper-pagination-bullet {
     @apply bg-teal-400;
+  }
+
+  .timeline-container {
+    @apply relative pt-2 md:w-1/2 md:ml-auto md:pl-16;
+  }
+  .timeline-container-left {
+    @apply md:ml-0 md:mr-auto md:pl-0 md:pr-16;
+  }
+  .timeline-pointer {
+    @apply absolute inset-0 left-10 h-4 w-4 transform rotate-45 bg-slate-200 dark:bg-slate-800 sm:hidden md:inline-flex sm:top-11 sm:left-28 md:left-14;
+  }
+  .timeline-pointer-left {
+    @apply md:left-auto md:right-14;
   }
 }

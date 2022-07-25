@@ -2,11 +2,7 @@ import React from "react";
 
 function Hero({ heroRef }) {
   return (
-    <section
-      className="flex flex-col min-h-screen justify-center section"
-      id="hero"
-      ref={heroRef}
-    >
+    <section className="section flex flex-col" id="hero" ref={heroRef}>
       <h1 className="text-7xl font-bold">
         <span className="dark:text-teal-400 font-satisfy">Valyn Silva</span>
       </h1>

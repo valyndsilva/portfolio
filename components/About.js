@@ -4,7 +4,7 @@ import Image from "next/image";
 function About({ aboutRef }) {
   return (
     <section
-      className="section grid grid-cols-1 lg:grid-cols-2 text-left w-[80vw] items-center justify-center mb-20"
+      className="section grid grid-cols-1 lg:grid-cols-2 text-left"
       id="about"
       ref={aboutRef}
     >

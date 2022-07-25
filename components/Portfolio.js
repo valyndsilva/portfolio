@@ -7,16 +7,21 @@ import { FiGithub } from "react-icons/fi";
 function Portfolio({ portfolioRef }) {
   return (
     <section
-      className="section w-[80vw] mt-5 z-20"
+      className="section"
       id="portfolio"
       ref={portfolioRef}
     >
-      <h2 className="text-left text-4xl font-semibold font-inter dark:text-slate-300 mb-20">
-        <span className="text-teal-400 text-4xl font-firacode font-light mr-2">
-          02.
-        </span>
-        Some Things I've Built
-      </h2>
+     <div class="text-center mb-20">
+        <h1 class="font-inter font-semibold dark:text-slate-300 text-5xl mb-4">
+          Some Things I've Built
+        </h1>
+        <p class="font-firacode text-md dark:text-slate-400 xl:w-2/4 lg:w-3/4 mx-auto">
+          Blue bottle crucifix vinyl post-ironic four dollar toast
+        </p>
+        <div class="flex mt-6 justify-center">
+          <div class="w-16 h-1 rounded-full bg-teal-400 inline-flex"></div>
+        </div>
+      </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-left ">
         <div className="relative hidden lg:inline-flex md:w-[35vw] h-[35vh]">
           <Image

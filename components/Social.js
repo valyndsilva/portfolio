@@ -1,8 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { BsLinkedin, BsDribbble, BsTwitter } from "react-icons/bs";
-import { SiGmail } from "react-icons/si";
-import { FiGithub, FiLinkedin } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiCodepen } from "react-icons/fi";
 function Social() {
   return (
     <div className="flex flex-col space-y-5 verticalLine after:bg-black dark:text-slate-400 after:dark:bg-slate-400  ">
@@ -27,9 +26,9 @@ function Social() {
           <BsTwitter className="socialIcons" />
         </a>
       </Link>
-      <Link href="mailto:valynsilva@gmail.com" target="_blank">
+      <Link href="https://codepen.io/valyndsilva" target="_blank">
         <a>
-          <SiGmail className="socialIcons" />
+          <FiCodepen className="socialIcons" />
         </a>
       </Link>
     </div>

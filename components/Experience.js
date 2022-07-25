@@ -3,17 +3,18 @@ import { Tab } from "@headlessui/react";
 import { VscDebugBreakpointLog } from "react-icons/vsc";
 function Experience({ experienceRef }) {
   return (
-    <section
-      className="section w-[80vw] mt-5 z-20"
-      id="experience"
-      ref={experienceRef}
-    >
-      <h2 className="text-left text-4xl font-semibold font-inter dark:text-slate-300">
-        <span className="text-teal-400 text-4xl font-firacode font-light mr-2">
-          01.
-        </span>
-        Where I've Worked
-      </h2>
+    <section className="section" id="experience" ref={experienceRef}>
+      <div class="text-center mb-20">
+        <h1 class="font-inter font-semibold dark:text-slate-300 text-5xl mb-4">
+          Where I've Worked?
+        </h1>
+        <p class="font-firacode text-md dark:text-slate-400 xl:w-2/4 lg:w-3/4 mx-auto">
+          Blue bottle crucifix vinyl post-ironic four dollar toast
+        </p>
+        <div class="flex mt-6 justify-center">
+          <div class="w-16 h-1 rounded-full bg-teal-400 inline-flex"></div>
+        </div>
+      </div>
       <Tab.Group vertical>
         <div className="grid grid-col-1 lg:grid-cols-3  mt-8 h-fit dark:text-slate-400">
           <Tab.List className="flex lg:flex-col  cols-span-1">
@@ -21,7 +22,7 @@ function Experience({ experienceRef }) {
               className={({ selected }) =>
                 selected
                   ? "p-5 text-teal-400 border border-teal-400 outline-none "
-                  : "p-5 border-slate-700 border active:scale-95 transition ease-in duration-150"
+                  : "p-5 dark:border-slate-700 border active:scale-95 transition ease-in duration-150"
               }
             >
               Valyn Silva
@@ -30,7 +31,7 @@ function Experience({ experienceRef }) {
               className={({ selected }) =>
                 selected
                   ? "p-5 text-teal-400 border border-teal-400 outline-none "
-                  : "p-5 border-slate-700 border active:scale-95 transition ease-in duration-150"
+                  : "p-5 dark:border-slate-700 border active:scale-95 transition ease-in duration-150"
               }
             >
               Phase Eight
@@ -39,7 +40,7 @@ function Experience({ experienceRef }) {
               className={({ selected }) =>
                 selected
                   ? "p-5 text-teal-400 border border-teal-400 outline-none "
-                  : "p-5 border-slate-700 border active:scale-95 transition ease-in duration-150"
+                  : "p-5 dark:border-slate-700 border active:scale-95 transition ease-in duration-150"
               }
             >
               Blowfish Limited
@@ -49,7 +50,7 @@ function Experience({ experienceRef }) {
               className={({ selected }) =>
                 selected
                   ? "p-5 text-teal-400 border border-teal-400 outline-none "
-                  : "p-5 border-slate-700 border active:scale-95 transition ease-in duration-150"
+                  : "p-5 dark:border-slate-700 border active:scale-95 transition ease-in duration-150"
               }
             >
               Vicapri Global Services Ltd
@@ -58,13 +59,13 @@ function Experience({ experienceRef }) {
               className={({ selected }) =>
                 selected
                   ? "p-5 text-teal-400 border border-teal-400 outline-none "
-                  : "p-5 border-slate-700 border active:scale-95 transition ease-in duration-150"
+                  : "p-5 dark:border-slate-700 border active:scale-95 transition ease-in duration-150"
               }
             >
               Rack Suppliers Ltd
             </Tab>
           </Tab.List>
-          <Tab.Panels className="col-span-2 border-slate-700 border p-10">
+          <Tab.Panels className="col-span-2 dark:border-slate-700 border p-10">
             <Tab.Panel className="justify-center font-firacode flex flex-col text-left w-full">
               <h5 className="text-left font-semibold text-md dark:text-slate-400 ">
                 Remote React Developer{" "}

@@ -3,9 +3,9 @@ import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { BsFillSunFill, BsFillMoonStarsFill } from "react-icons/bs";
 import { RiServiceLine } from "react-icons/ri";
-import { BiMessageSquareDetail } from "react-icons/bi";
+import { BiMessageSquareDetail,BiBook } from "react-icons/bi";
 import { AiOutlineHome, AiOutlineUser, AiOutlineMessage } from "react-icons/ai";
-import { MdWorkOutline } from "react-icons/md";
+import { MdOutlineMiscellaneousServices, MdWorkOutline } from "react-icons/md";
 function Nav({
   clickedNav,
   setClickedNav,
@@ -13,7 +13,9 @@ function Nav({
   selected,
   hero,
   about,
+  services,
   experience,
+  education,
   portfolio,
   testimonials,
   contact,
@@ -53,7 +55,7 @@ function Nav({
     } else {
       return (
         <BsFillMoonStarsFill
-          className="h-6 w-6 cursor-pointer"
+          className="h-5 w-5 cursor-pointer"
           onClick={() => setTheme("dark")}
         />
       );
@@ -88,6 +90,20 @@ function Nav({
           </a>
         </Link>
 
+        <Link href="#services">
+          <a>
+            <MdOutlineMiscellaneousServices
+              className={` ${
+                visibleSection === services && "selected"
+              }  w-6 h-6 cursor-pointer`}
+              onClick={() => {
+                setClickedNav("services");
+                scrollTo(serviceseRef.current);
+              }}
+            />
+          </a>
+        </Link>
+
         <Link href="#experience">
           <a>
             <MdWorkOutline
@@ -101,17 +117,32 @@ function Nav({
             />
           </a>
         </Link>
-        <a href="#portfolio">
-          <RiServiceLine
-            className={` ${
-              visibleSection === portfolio && "selected"
-            } w-6 h-6 cursor-pointer`}
-            onClick={() => {
-              setClickedNav("portfolio");
-              scrollTo(portfolioRef.current);
-            }}
-          />
-        </a>
+        <Link href="#education">
+          <a>
+            <BiBook
+              className={` ${
+                visibleSection === education && "selected"
+              }  w-6 h-6 cursor-pointer`}
+              onClick={() => {
+                setClickedNav("education");
+                scrollTo(educationRef.current);
+              }}
+            />
+          </a>
+        </Link>
+        <Link href="#portfolio">
+          <a>
+            <RiServiceLine
+              className={` ${
+                visibleSection === portfolio && "selected"
+              } w-6 h-6 cursor-pointer`}
+              onClick={() => {
+                setClickedNav("portfolio");
+                scrollTo(portfolioRef.current);
+              }}
+            />
+          </a>
+        </Link>
         <Link href="#testimonials">
           <a>
             <BiMessageSquareDetail
