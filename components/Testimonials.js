@@ -15,7 +15,7 @@ function Testimonials({ testimonialsRef }) {
     <section className="section" id="testimonials" ref={testimonialsRef}>
       <div class="text-center">
         <h1 class="font-inter font-semibold dark:text-slate-300 text-5xl mb-4">
-          What Clients Say About Working With Me
+          What Clients Say About Me
         </h1>
         <p class="font-firacode text-md dark:text-slate-400 xl:w-2/4 lg:w-3/4 mx-auto">
           Blue bottle crucifix vinyl post-ironic four dollar toast

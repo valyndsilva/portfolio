@@ -37,7 +37,7 @@
     font-weight: 400;
   }
   .section {
-    @apply h-full w-[80vw] min-h-screen justify-center items-center z-20  pt-20;
+    @apply h-full w-[70vw] md:w-[80vw] min-h-screen justify-center items-center z-20  pt-20;
   }
   .selected {
     @apply text-teal-400;

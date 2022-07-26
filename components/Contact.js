@@ -3,11 +3,7 @@ import { BiPaperPlane } from "react-icons/bi";
 
 function Contact({ contactRef }) {
   return (
-    <section
-      className="w-[80vw] h-[70vh] justify-center items-center z-20"
-      id="contact"
-      ref={contactRef}
-    >
+    <section className="section pt-20" id="contact" ref={contactRef}>
       <div className="text-center mb-20">
         <h1 className="font-inter font-semibold dark:text-slate-300 text-5xl mb-4">
           Get In Touch?
