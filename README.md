@@ -49,3 +49,4 @@ https://nextjs.org/docs/advanced-features/custom-document
 npm install react-icons
 npm install react-reveal
 npm install swiper
+npm install @ap.cx/react-fullpage

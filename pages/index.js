@@ -91,9 +91,9 @@ const Home = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [visibleSection, clickedNav]);
+
   return (
-    <div className="flex min-h-screen w-full flex-col items-center justify-center py-2 px-20 text-center bg-teal-50 dark:bg-slate-900">
-      <Hero heroRef={heroRef} />
+    <div className="flex flex-col w-full items-center justify-center px-20 text-center bg-teal-50 dark:bg-slate-900">
       <SideNav />
       <Nav
         clickedNav={clickedNav}
@@ -118,13 +118,23 @@ const Home = () => {
         testimonialsRef={testimonialsRef}
         contactRef={contactRef}
       />
+
+      <Hero heroRef={heroRef} />
+
       <About aboutRef={aboutRef} />
+
       <Services servicesRef={servicesRef} />
+
       <Experience experienceRef={experienceRef} />
+
       <Education educationRef={educationRef} />
+
       <Portfolio portfolioRef={portfolioRef} />
+
       <Testimonials testimonialsRef={testimonialsRef} />
+
       <Contact contactRef={contactRef} />
+
       <Footer />
     </div>
   );

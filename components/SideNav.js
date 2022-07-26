@@ -4,7 +4,8 @@ import Social from "./Social";
 import Fade from "react-reveal/Fade";
 function SideNav() {
   return (
-    <nav className="fixed bottom-0 mb-4 z-10">
+    <nav className="fixed bottom-0  mb-4 z-10">
+      <Fade bottom duration={3200}>
       <div className="flex w-[90vw] items-center justify-between">
         <Social />
         <div className="verticalLine verticalMode flex tracking-widest after:bg-black dark:text-slate-400 after:dark:bg-slate-400">
@@ -15,6 +16,7 @@ function SideNav() {
           </Link>
         </div>
       </div>
+      </Fade>
     </nav>
   );
 }
