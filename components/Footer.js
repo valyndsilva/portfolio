@@ -1,11 +1,5 @@
 import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { BsTwitter, BsWhatsapp, BsMessenger } from "react-icons/bs";
-import { SiGmail } from "react-icons/si";
-import { FiLinkedin } from "react-icons/fi";
-import { RiMessengerLine } from "react-icons/ri";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 function Footer() {
   return (
     <footer className="w-[80vw z-20 dark:text-slate-400 font-firacode ">

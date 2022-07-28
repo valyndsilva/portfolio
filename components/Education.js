@@ -1,12 +1,12 @@
 import React from "react";
 import Timeline from "./Timeline";
 import TimelineLeft from "./TimelineLeft";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 function Education({ educationRef }) {
   return (
     <section className="section flex-col" id="education" ref={educationRef}>
       <div className="w-[70vw] md:w-[75vw] mx-auto pt-12">
-        <Fade top duration={1000}>
+        <Fade direction="down" duration={1000}>
           <div className="text-center mb-12">
             <h1 className="font-inter font-semibold dark:text-slate-300 text-5xl mb-4">
               What I've Studied?
@@ -19,7 +19,7 @@ function Education({ educationRef }) {
             </div>
           </div>
         </Fade>
-        <Fade bottom duration={2200}>
+        <Fade direction="up" duration={2200}>
           <div className="relative container mx-auto px-6 flex flex-col space-y-8">
             <div className="absolute z-0 w-[1px] h-full md:bg-teal-400 shadow-md inset-0  md:mx-auto md:right-0 md:left-0"></div>
 

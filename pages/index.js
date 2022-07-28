@@ -12,7 +12,7 @@ import {
   Footer,
   Education,
 } from "../components";
-
+import { sanityClient } from "../lib/sanity.server";
 const getDimensions = (ele) => {
   const { height } = ele.getBoundingClientRect();
   const offsetTop = ele.offsetTop;
@@ -32,7 +32,9 @@ const scrollTo = (ele) => {
   });
 };
 
-const Home = () => {
+const Home = ({ testimonialsInfo, portfolioInfo }) => {
+  console.log(testimonialsInfo);
+  console.log(portfolioInfo);
   const [visibleSection, setVisibleSection] = useState();
   const [clickedNav, setClickedNav] = useState();
 
@@ -129,9 +131,12 @@ const Home = () => {
 
       <Education educationRef={educationRef} />
 
-      <Portfolio portfolioRef={portfolioRef} />
+      <Portfolio portfolioInfo={portfolioInfo} portfolioRef={portfolioRef} />
 
-      <Testimonials testimonialsRef={testimonialsRef} />
+      <Testimonials
+        testimonialsInfo={testimonialsInfo}
+        testimonialsRef={testimonialsRef}
+      />
 
       <Contact contactRef={contactRef} />
 
@@ -141,3 +146,43 @@ const Home = () => {
 };
 
 export default Home;
+
+export const getServerSideProps = async () => {
+  //This is where the Server pre-builds the pages and changes the homepage route to SSR route
+  const testimonialsQuery = `*[_type == "testimonials"]{
+    description,
+   name,
+ company,
+  }`;
+  console.log(testimonialsQuery);
+
+  const testimonialsInfo = await sanityClient.fetch(testimonialsQuery); // Fetch Posts from Sanity
+  console.log(testimonialsInfo);
+
+  const portfolioQuery = `*[_type == "portfolio"]{
+    title,
+    description,
+    imgUrl,
+   skill1,
+   skill2,
+   skill3,
+   skill4,
+   skill5,
+   skill7,
+   skill8,
+   skill8,
+ demoLink,
+ githubLink,
+
+  }`;
+  console.log(portfolioQuery);
+
+  const portfolioInfo = await sanityClient.fetch(portfolioQuery);
+  return {
+    // props:{} will be passed to the page component as props
+    props: {
+      testimonialsInfo,
+      portfolioInfo,
+    },
+  };
+};

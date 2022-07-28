@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { BiPaperPlane } from "react-icons/bi";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 import { sendContactForm } from "../services";
 function Contact({ contactRef }) {
   const [message, setMessage] = useState("");

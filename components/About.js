@@ -1,13 +1,13 @@
 import React from "react";
 import { BsFillCheckCircleFill } from "react-icons/bs";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 import Image from "next/image";
 function About({ aboutRef }) {
   return (
     <section className="section text-left " id="about" ref={aboutRef}>
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-center w-[70vw] md:w-[80vw] mx-auto pt-12">
         <div className="">
-          <Fade left duration={1000}>
+        <Fade direction="left" duration={1200}>
             <h5 className="text-lg font-firacode font-light pb-5 dark:text-teal-400">
               Hi, my name is
             </h5>
@@ -54,7 +54,7 @@ function About({ aboutRef }) {
         </div>
 
         <div>
-          <Fade right duration={2200}>
+        <Fade direction="right" duration={2200}>
             <div className="relative h-[50vh] lg:h-[80vh]">
               <Image
                 src="/images/profile-transparent.png"

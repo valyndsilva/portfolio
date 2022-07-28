@@ -1,7 +1,5 @@
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import ToggleButton from "../components/ToggleButton";
 import { BsFillSunFill, BsFillMoonStarsFill } from "react-icons/bs";
 import Logo from "./Logo";
 // import CV from "../assets/CV.pdf";

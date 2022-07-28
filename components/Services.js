@@ -2,12 +2,12 @@ import React from "react";
 import { BsCodeSlash } from "react-icons/bs";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { SiBrandfolder } from "react-icons/si";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 function Services({ servicesRef }) {
   return (
     <section className="section flex-col" id="services" ref={servicesRef}>
       <div className="w-[70vw] md:w-[75vw] mx-auto pt-12">
-        <Fade top duration={1000}>
+      <Fade direction="down" duration={1000}>
           <div className="text-center mb-12">
             <h1 className="font-inter font-semibold dark:text-slate-300 text-5xl mb-4">
               What Do I Do?
@@ -21,7 +21,7 @@ function Services({ servicesRef }) {
           </div>
         </Fade>
 
-        <Fade bottom duration={2200}>
+        <Fade direction="up" duration={1000}>
           <div className="flex flex-wrap justify-center items-center md:space-y-0 space-y-6">
             <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
               <div className="w-20 h-20 md:w-40 md:h-40 inline-flex items-center justify-center rounded-full shadow-md border dark:border-none dark:bg-slate-700 mb-5 flex-shrink-0">

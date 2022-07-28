@@ -50,3 +50,10 @@ npm install react-icons
 npm install react-reveal
 npm install swiper
 npm install @ap.cx/react-fullpage
+npm install -g @sanity/cli
+npm install next-sanity
+npm install @sanity/image-url
+sanity init
+cd sanity-studio
+sanity start
+npm install --save next-sanity-image

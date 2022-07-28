@@ -6,7 +6,7 @@ import { RiServiceLine } from "react-icons/ri";
 import { BiMessageSquareDetail, BiBook } from "react-icons/bi";
 import { AiOutlineHome, AiOutlineUser, AiOutlineMessage } from "react-icons/ai";
 import { MdOutlineMiscellaneousServices, MdWorkOutline } from "react-icons/md";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 function Nav({
   clickedNav,
   setClickedNav,
@@ -66,8 +66,8 @@ function Nav({
   };
 
   return (
-    <Fade bottom duration={3800}>
-      <nav className="fixed bottom-8  z-30 shadow-xl bg-slate-300 dark:bg-slate-600 px-5 py-3 rounded-full opacity-30 hover:opacity-100 transition ease-in duration-100">
+    <nav className="fixed bottom-8  z-30 shadow-xl bg-slate-300 dark:bg-slate-600 px-5 py-3 rounded-full opacity-50 hover:opacity-100 transition ease-in duration-100">
+      <Fade direction="up" duration={1000}>
         <div className="flex space-x-4 ">
           <Link href="#hero">
             <a>
@@ -175,8 +175,8 @@ function Nav({
           </Link>
           {renderThemeChanger()}
         </div>
-      </nav>
-    </Fade>
+      </Fade>
+    </nav>
   );
 }
 

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { BsLinkedin, BsDribbble, BsTwitter } from "react-icons/bs";
+import { BsDribbble, BsTwitter } from "react-icons/bs";
 import { FiGithub, FiLinkedin, FiCodepen } from "react-icons/fi";
 function Social() {
   return (

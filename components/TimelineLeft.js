@@ -19,7 +19,7 @@ function TimelineLeft({
           className="timeline-pointer timeline-pointer-left hidden md:inline-flex"
           aria-hidden="true"
         ></div>
-        <div className="border dark:border-none dark:bg-slate-800 p-6 rounded-md shadow-md">
+        <div className="bg-slate-50 border dark:border-none dark:bg-slate-800 p-6 rounded-md shadow-md">
           <div className="text-left">
             <h3 className="font-inter font-semibold text-md dark:text-slate-300">
               {jobTitle}

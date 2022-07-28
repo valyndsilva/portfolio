@@ -1,12 +1,13 @@
 import React from "react";
+import { BiChevronDown } from "react-icons/bi";
 import { VscDebugBreakpointLog } from "react-icons/vsc";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 
 function Experience({ experienceRef }) {
   return (
     <section className="section flex-col" id="experience" ref={experienceRef}>
       <div className="w-[70vw] md:w-[75vw] mx-auto pt-12">
-        <Fade right duration={1200}>
+        <Fade direction="right" duration={1000}>
           <div className="text-center mb-12">
             <h1 className="font-inter font-semibold dark:text-slate-300 text-5xl mb-4">
               Where I've Worked?
@@ -20,7 +21,7 @@ function Experience({ experienceRef }) {
           </div>
         </Fade>
 
-        <Fade left duration={2200}>
+        <Fade direction="left" duration={2200}>
           <div
             id="accordion-collapse"
             data-accordion="collapse"
@@ -29,7 +30,7 @@ function Experience({ experienceRef }) {
             <h2 id="accordion-collapse-heading-1">
               <button
                 type="button"
-                class="flex items-center justify-between w-full p-5 font-medium text-left text-slate-500 border border-b-0 border-slate-200 focus:ring-4 focus:ring-slate-200 dark:focus:ring-slate-800 dark:border-slate-700 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-t-xl "
+                className="flex items-center justify-between w-full p-5 font-medium text-left text-slate-500 border border-b-0 border-slate-200 focus:ring-4 focus:ring-slate-200 dark:focus:ring-slate-800 dark:border-slate-700 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-t-xl "
                 data-accordion-target="#accordion-collapse-body-1"
                 aria-expanded="false"
                 aria-controls="accordion-collapse-body-1"
@@ -41,27 +42,15 @@ function Experience({ experienceRef }) {
                 <h6 className=" text-xs dark:text-slate-400 mt-3 mb-5 text-left font-firacode">
                   March 2018 - Present
                 </h6>
-                <svg
-                  data-accordion-icon=""
-                  class="w-6 h-6 shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
+                <BiChevronDown className="w-5 h-5 text-slate-400" />
               </button>
             </h2>
             <div
               id="accordion-collapse-body-1"
-              class="hidden"
+              className="hidden"
               aria-labelledby="accordion-collapse-heading-1"
             >
-              <div class="p-5 font-light border border-b-0 border-slate-200 dark:border-slate-700">
+              <div className="p-5 font-light border border-b-0 border-slate-200 dark:border-slate-700">
                 <ul className="text-left dark:text-slate-400 text-sm space-y-3  font-firacode">
                   <li className="flex">
                     <VscDebugBreakpointLog className="w-4 h-4 text-teal-400 mr-4" />{" "}
@@ -86,7 +75,7 @@ function Experience({ experienceRef }) {
             <h2 id="accordion-collapse-heading-2">
               <button
                 type="button"
-                class="flex items-center justify-between w-full p-5 font-medium text-left text-slate-500 border border-b-0 border-slate-200 focus:ring-4 focus:ring-slate-200 dark:focus:ring-slate-800 dark:border-slate-700 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800"
+                className="flex items-center justify-between w-full p-5 font-medium text-left text-slate-500 border border-b-0 border-slate-200 focus:ring-4 focus:ring-slate-200 dark:focus:ring-slate-800 dark:border-slate-700 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800"
                 data-accordion-target="#accordion-collapse-body-2"
                 aria-expanded="false"
                 aria-controls="accordion-collapse-body-2"
@@ -98,27 +87,15 @@ function Experience({ experienceRef }) {
                 <h6 className=" text-xs dark:text-slate-400 mt-3 mb-5 text-left font-firacode">
                   April 2015 - March 2018
                 </h6>
-                <svg
-                  data-accordion-icon=""
-                  class="w-6 h-6 shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
+                <BiChevronDown className="w-5 h-5 text-slate-400" />
               </button>
             </h2>
             <div
               id="accordion-collapse-body-2"
-              class="hidden"
+              className="hidden"
               aria-labelledby="accordion-collapse-heading-2"
             >
-              <div class="p-5 font-light border border-b-0 border-slate-200 dark:border-slate-700">
+              <div className="p-5 font-light border border-b-0 border-slate-200 dark:border-slate-700">
                 <ul className="text-left dark:text-slate-400 text-sm space-y-3  font-firacode">
                   <li className="flex">
                     <VscDebugBreakpointLog className="w-4 h-4 text-teal-400 mr-4" />{" "}
@@ -144,7 +121,7 @@ function Experience({ experienceRef }) {
             <h2 id="accordion-collapse-heading-3">
               <button
                 type="button"
-                class="flex items-center justify-between w-full p-5 font-medium text-left text-slate-500 border border-slate-200 focus:ring-4 focus:ring-slate-200 dark:focus:ring-slate-800 dark:border-slate-700 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800"
+                className="flex items-center justify-between w-full p-5 font-medium text-left text-slate-500 border border-slate-200 focus:ring-4 focus:ring-slate-200 dark:focus:ring-slate-800 dark:border-slate-700 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800"
                 data-accordion-target="#accordion-collapse-body-3"
                 aria-expanded="false"
                 aria-controls="accordion-collapse-body-3"
@@ -156,27 +133,15 @@ function Experience({ experienceRef }) {
                 <h6 className=" text-xs dark:text-slate-400 mt-3 mb-5 text-left  font-firacode">
                   Nov 2014 - March 2015
                 </h6>
-                <svg
-                  data-accordion-icon=""
-                  class="w-6 h-6 shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
+                <BiChevronDown className="w-5 h-5 text-slate-400" />
               </button>
             </h2>
             <div
               id="accordion-collapse-body-3"
-              class="hidden"
+              className="hidden"
               aria-labelledby="accordion-collapse-heading-3"
             >
-              <div class="p-5 font-light border border-t-0 border-slate-200 dark:border-slate-700">
+              <div className="p-5 font-light border border-t-0 border-slate-200 dark:border-slate-700">
                 <ul className="text-left dark:text-slate-400 text-sm space-y-3  font-firacode">
                   <li className="flex">
                     <VscDebugBreakpointLog className="w-4 h-4 text-teal-400 mr-4" />{" "}
@@ -203,7 +168,7 @@ function Experience({ experienceRef }) {
             <h2 id="accordion-collapse-heading-4">
               <button
                 type="button"
-                class="flex items-center justify-between w-full p-5 font-medium text-left text-slate-500 border border-slate-200 focus:ring-4 focus:ring-slate-200 dark:focus:ring-slate-800 dark:border-slate-700 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800"
+                className="flex items-center justify-between w-full p-5 font-medium text-left text-slate-500 border border-slate-200 focus:ring-4 focus:ring-slate-200 dark:focus:ring-slate-800 dark:border-slate-700 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800"
                 data-accordion-target="#accordion-collapse-body-4"
                 aria-expanded="false"
                 aria-controls="accordion-collapse-body-4"
@@ -218,27 +183,15 @@ function Experience({ experienceRef }) {
                 <h6 className=" text-xs dark:text-slate-400 mt-3 mb-5 text-left  font-firacode">
                   July 2014 - October 2014
                 </h6>
-                <svg
-                  data-accordion-icon=""
-                  class="w-6 h-6 shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
+                <BiChevronDown className="w-5 h-5 text-slate-400" />
               </button>
             </h2>
             <div
               id="accordion-collapse-body-4"
-              class="hidden"
+              className="hidden"
               aria-labelledby="accordion-collapse-heading-4"
             >
-              <div class="p-5 font-light border border-t-0 border-slate-200 dark:border-slate-700">
+              <div className="p-5 font-light border border-t-0 border-slate-200 dark:border-slate-700">
                 <ul className="text-left dark:text-slate-400 text-sm space-y-3  font-firacode">
                   <li className="flex">
                     <VscDebugBreakpointLog className="w-4 h-4 text-teal-400 mr-4" />{" "}
@@ -259,7 +212,7 @@ function Experience({ experienceRef }) {
             <h2 id="accordion-collapse-heading-5">
               <button
                 type="button"
-                class="flex items-center justify-between w-full p-5 font-medium text-left text-slate-500 border border-slate-200 focus:ring-4 focus:ring-slate-200 dark:focus:ring-slate-800 dark:border-slate-700 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 border-t-0 rounded-b-xl "
+                className="flex items-center justify-between w-full p-5 font-medium text-left text-slate-500 border border-slate-200 focus:ring-4 focus:ring-slate-200 dark:focus:ring-slate-800 dark:border-slate-700 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 border-t-0 rounded-b-xl "
                 data-accordion-target="#accordion-collapse-body-5"
                 aria-expanded="false"
                 aria-controls="accordion-collapse-body-5"
@@ -271,27 +224,15 @@ function Experience({ experienceRef }) {
                 <h6 className=" text-xs dark:text-slate-400 mt-3 mb-5 text-left  font-firacode">
                   Sept 2013 - June 2014
                 </h6>
-                <svg
-                  data-accordion-icon=""
-                  class="w-6 h-6 shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
+                <BiChevronDown className="w-5 h-5 text-slate-400" />
               </button>
             </h2>
             <div
               id="accordion-collapse-body-5"
-              class="hidden"
+              className="hidden"
               aria-labelledby="accordion-collapse-heading-5"
             >
-              <div class="p-5 font-light border border-t-0 border-slate-200 dark:border-slate-700">
+              <div className="p-5 font-light border border-t-0 border-slate-200 dark:border-slate-700">
                 <ul className="text-left dark:text-slate-400 text-sm space-y-3  font-firacode">
                   <li className="flex">
                     <VscDebugBreakpointLog className="w-4 h-4 text-teal-400 mr-4" />{" "}
