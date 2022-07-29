@@ -32,9 +32,10 @@ const scrollTo = (ele) => {
   });
 };
 
-const Home = ({ testimonialsInfo, portfolioInfo }) => {
+const Home = ({ testimonialsInfo, portfolioInfo, experienceInfo }) => {
   console.log(testimonialsInfo);
   console.log(portfolioInfo);
+  console.log(experienceInfo);
   const [visibleSection, setVisibleSection] = useState();
   const [clickedNav, setClickedNav] = useState();
 
@@ -127,7 +128,10 @@ const Home = ({ testimonialsInfo, portfolioInfo }) => {
 
       <Services servicesRef={servicesRef} />
 
-      <Experience experienceRef={experienceRef} />
+      <Experience
+        experienceInfo={experienceInfo}
+        experienceRef={experienceRef}
+      />
 
       <Education educationRef={educationRef} />
 
@@ -178,11 +182,28 @@ export const getServerSideProps = async () => {
   console.log(portfolioQuery);
 
   const portfolioInfo = await sanityClient.fetch(portfolioQuery);
+
+  const experienceQuery = `*[_type == "experience"]{
+    jobId,
+    jobTitle,
+    company,
+    startEndDate,
+    description1,
+    description2,
+    description3,
+    description4,
+
+  }`;
+  console.log(experienceQuery);
+
+  const experienceInfo = await sanityClient.fetch(experienceQuery); // Fetch Posts from Sanity
+  console.log(experienceInfo);
   return {
     // props:{} will be passed to the page component as props
     props: {
       testimonialsInfo,
       portfolioInfo,
+      experienceInfo,
     },
   };
 };

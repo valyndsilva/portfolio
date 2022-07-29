@@ -4,6 +4,11 @@ export default {
   type: "document",
   fields: [
     {
+      name: "jobId",
+      title: "Job ID",
+      type: "number",
+    },
+    {
       name: "jobTitle",
       title: "Job Title",
       type: "string",
@@ -20,8 +25,23 @@ export default {
       type: "string",
     },
     {
-      name: "description",
-      title: "Description",
+      name: "description1",
+      title: "Description 1",
+      type: "string",
+    },
+    {
+      name: "description2",
+      title: "Description 2",
+      type: "string",
+    },
+    {
+      name: "description3",
+      title: "Description 3",
+      type: "string",
+    },
+    {
+      name: "description4",
+      title: "Description 4",
       type: "string",
     },
   ],

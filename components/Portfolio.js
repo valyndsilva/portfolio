@@ -33,7 +33,10 @@ function Portfolio({ portfolioInfo, portfolioRef }) {
             } flex space-x-8 text-left mb-20 items-center`}
             key={index}
           >
-            <Fade direction="left" duration={2200}>
+            <Fade
+              direction={`${index % 2 == 0 ? "left" : "right"}`}
+              duration={2200}
+            >
               <div
                 className={`${
                   index % 2 == 0 ? "ml-0" : "ml-10"
@@ -48,7 +51,10 @@ function Portfolio({ portfolioInfo, portfolioRef }) {
                 />
               </div>
             </Fade>
-            <Fade direction="right" duration={3200}>
+            <Fade
+              direction={`${index % 2 == 0 ? "right" : "left"}`}
+              duration={3200}
+            >
               <div className="">
                 <h2 className="text-4xl font-inter font-semibold dark:text-slate-300 mb-2">
                   {item.title}
