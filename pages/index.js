@@ -32,7 +32,15 @@ const scrollTo = (ele) => {
   });
 };
 
-const Home = ({ testimonialsInfo, portfolioInfo, experienceInfo }) => {
+const Home = ({
+  heroInfo,
+  aboutInfo,
+  testimonialsInfo,
+  portfolioInfo,
+  experienceInfo,
+}) => {
+  console.log(heroInfo);
+  console.log(aboutInfo);
   console.log(testimonialsInfo);
   console.log(portfolioInfo);
   console.log(experienceInfo);
@@ -122,9 +130,9 @@ const Home = ({ testimonialsInfo, portfolioInfo, experienceInfo }) => {
         contactRef={contactRef}
       />
 
-      <Hero heroRef={heroRef} />
+      <Hero heroInfo={heroInfo} heroRef={heroRef} />
 
-      <About aboutRef={aboutRef} />
+      <About aboutInfo={aboutInfo} aboutRef={aboutRef} />
 
       <Services servicesRef={servicesRef} />
 
@@ -151,8 +159,35 @@ const Home = ({ testimonialsInfo, portfolioInfo, experienceInfo }) => {
 
 export default Home;
 
+//This is where the Server pre-builds the pages and changes the homepage route to SSR route
 export const getServerSideProps = async () => {
-  //This is where the Server pre-builds the pages and changes the homepage route to SSR route
+  const heroQuery = `*[_type == "hero"]{
+    name,
+    jobTitle
+  }`;
+  console.log(heroQuery);
+
+  const heroInfo = await sanityClient.fetch(heroQuery); // Fetch Posts from Sanity
+  console.log(heroInfo);
+
+  const aboutQuery = `*[_type == "about"]{
+    intro,
+    name,
+    phonetics,
+    description,
+    skillsIntro,
+    skill1,
+    skill2,
+    skill3,
+    skill4,
+    skill5,
+    skill6,
+  }`;
+  console.log(aboutQuery);
+
+  const aboutInfo = await sanityClient.fetch(aboutQuery); // Fetch Posts from Sanity
+  console.log(aboutInfo);
+
   const testimonialsQuery = `*[_type == "testimonials"]{
     description,
    name,
@@ -183,7 +218,7 @@ export const getServerSideProps = async () => {
 
   const portfolioInfo = await sanityClient.fetch(portfolioQuery);
 
-  const experienceQuery = `*[_type == "experience"]{
+  const experienceQuery = `*[_type == "experience"]| order(_createdAt desc){
     jobId,
     jobTitle,
     company,
@@ -201,6 +236,8 @@ export const getServerSideProps = async () => {
   return {
     // props:{} will be passed to the page component as props
     props: {
+      heroInfo,
+      aboutInfo,
       testimonialsInfo,
       portfolioInfo,
       experienceInfo,

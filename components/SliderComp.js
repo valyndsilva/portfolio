@@ -6,7 +6,6 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 
 function SliderComp({ testimonialsInfo }) {
-  console.log(testimonialsInfo);
   return (
     <Swiper
       className="pt-10 pb-10"
