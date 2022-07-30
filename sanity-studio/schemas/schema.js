@@ -11,6 +11,7 @@ import experience from "./experience";
 import experiences from "./experiences";
 import course from "./course";
 import education from "./education";
+import project from "./project";
 import portfolio from "./portfolio";
 import testimonial from "./testimonial";
 import testimonials from "./testimonials";
@@ -32,6 +33,7 @@ export default createSchema({
     experiences,
     course,
     education,
+    project,
     portfolio,
     testimonial,
     testimonials,

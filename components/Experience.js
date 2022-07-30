@@ -2,7 +2,6 @@ import React from "react";
 import { BiChevronDown } from "react-icons/bi";
 import { VscDebugBreakpointLog } from "react-icons/vsc";
 import { Fade } from "react-awesome-reveal";
-import exp from "constants";
 
 function Experience({ experienceInfo, experienceRef }) {
   return (

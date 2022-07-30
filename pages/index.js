@@ -42,14 +42,14 @@ const Home = ({
   experienceInfo,
   contactInfo,
 }) => {
-  console.log(heroInfo);
-  console.log(aboutInfo);
-  console.log(servicesInfo);
-  console.log(educationInfo);
-  console.log(testimonialsInfo);
-  console.log(portfolioInfo);
-  console.log(experienceInfo);
-  console.log(contactInfo);
+  console.log({ heroInfo });
+  console.log({ aboutInfo });
+  console.log({ servicesInfo });
+  console.log({ educationInfo });
+  console.log({ testimonialsInfo });
+  console.log({ portfolioInfo });
+  console.log({ experienceInfo });
+  console.log({ contactInfo });
   const [visibleSection, setVisibleSection] = useState();
   const [clickedNav, setClickedNav] = useState();
 
@@ -227,17 +227,7 @@ export const getServerSideProps = async () => {
   const portfolioQuery = `*[_type == "portfolio"]{
   title,
   description,
-  imgUrl,
-  skill1,
-  skill2,
-  skill3,
-  skill4,
-  skill5,
-  skill7,
-  skill8,
-  skill8,
-  demoLink,
-  githubLink,
+  project,
 
   }`;
   console.log(portfolioQuery);

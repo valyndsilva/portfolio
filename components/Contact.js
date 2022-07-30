@@ -26,7 +26,7 @@ function Contact({ contactInfo, contactRef }) {
   return (
     <section className="section flex-col" id="contact" ref={contactRef}>
       <div className="w-[70vw] md:w-[75vw] mx-auto pt-12">
-        <Fade right duration={1000}>
+        <Fade direction="right" duration={1000}>
           <div className="text-center items-center justify-center mx-auto mb-12">
             <h1 className="font-inter font-semibold dark:text-slate-300 text-5xl mb-4">
               {contactInfo[0].title}
@@ -51,7 +51,7 @@ function Contact({ contactInfo, contactRef }) {
               </span>
             </div>
           )}
-          <Fade left duration={2200}>
+          <Fade direction="left" duration={2200}>
             <form
               id="contact-form"
               ref={formRef}

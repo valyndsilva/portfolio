@@ -2,7 +2,7 @@
 import S from "@sanity/desk-tool/structure-builder";
 
 const hiddenDocTypes = (listItem) =>
-  !["service", "experience", "course", "testimonial"].includes(
+  !["service", "experience", "course", "project", "testimonial"].includes(
     listItem.getId()
   );
 
