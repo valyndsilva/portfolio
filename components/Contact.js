@@ -3,7 +3,7 @@ import { AiFillCloseCircle } from "react-icons/ai";
 import { BiPaperPlane } from "react-icons/bi";
 import { Fade } from "react-awesome-reveal";
 import { sendContactForm } from "../services";
-function Contact({ contactRef }) {
+function Contact({ contactInfo, contactRef }) {
   const [message, setMessage] = useState("");
   const formRef = useRef();
   const submitContact = async (e) => {
@@ -29,11 +29,10 @@ function Contact({ contactRef }) {
         <Fade right duration={1000}>
           <div className="text-center items-center justify-center mx-auto mb-12">
             <h1 className="font-inter font-semibold dark:text-slate-300 text-5xl mb-4">
-              Get In Touch?
+              {contactInfo[0].title}
             </h1>
             <p className="font-firacode text-md dark:text-slate-400 w-1/2 mx-auto">
-              Have an idea or a concept that really excites you? <br />
-              Let's turn that idea into reality.
+              {contactInfo[0].description}
             </p>
             <div className="flex mt-6 justify-center">
               <div className="w-16 h-1 rounded-full bg-teal-400 inline-flex"></div>
@@ -63,7 +62,7 @@ function Contact({ contactRef }) {
                 <div className="relative">
                   <input
                     required
-                    placeholder="Name*"
+                    placeholder={contactInfo[0].namePlaceholder}
                     type={"text"}
                     minLength={3}
                     maxLength={25}
@@ -77,7 +76,7 @@ function Contact({ contactRef }) {
                 <div className="relative">
                   <input
                     required
-                    placeholder="Email Address*"
+                    placeholder={contactInfo[0].emailPlaceholder}
                     type={"email"}
                     id="email"
                     name="email"
@@ -89,7 +88,7 @@ function Contact({ contactRef }) {
                 <div className="relative">
                   <textarea
                     required
-                    placeholder="Message"
+                    placeholder={contactInfo[0].messagePlaceholder}
                     id="message"
                     name="message"
                     className="w-full dark:bg-slate-900 bg-opacity-50 rounded-lg border dark:border-slate-300   text-base outline-none dark:text-slate-400 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out"

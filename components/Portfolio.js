@@ -45,8 +45,8 @@ function Portfolio({ portfolioInfo, portfolioRef }) {
                 <img
                   src={urlFor(item.imgUrl)}
                   alt="avatar"
-                  layout="fill"
-                  objectFit="contain"
+                  // layout="fill"
+                  // objectFit="contain"
                   className="rounded-lg "
                 />
               </div>
@@ -69,32 +69,57 @@ function Portfolio({ portfolioInfo, portfolioRef }) {
                 </p>
                 <ul className="text-sm font-firacode dark:text-slate-400 flex justify-between mb-10">
                   <div className="space-y-2">
-                    <li className="flex">
-                      <BsFillCheckCircleFill className="w-5 h-5 mr-2 text-teal-400" />
-                      {item.skill1}
-                    </li>
-                    <li className="flex">
-                      <BsFillCheckCircleFill className="w-5 h-5 mr-2 text-teal-400" />
-                      {item.skill2}
-                    </li>
-                    <li className="flex">
-                      <BsFillCheckCircleFill className="w-5 h-5 mr-2 text-teal-400" />
-                      {item.skill3}
-                    </li>
+                    {item?.skill1 && (
+                      <li className="flex">
+                        <BsFillCheckCircleFill className="w-5 h-5 mr-2 text-teal-400" />
+                        {item.skill1}
+                      </li>
+                    )}
+                    {item?.skill3 && (
+                      <li className="flex">
+                        <BsFillCheckCircleFill className="w-5 h-5 mr-2 text-teal-400" />
+                        {item.skill3}
+                      </li>
+                    )}
+                    {item?.skill5 && (
+                      <li className="flex">
+                        <BsFillCheckCircleFill className="w-5 h-5 mr-2 text-teal-400" />
+                        {item.skill5}
+                      </li>
+                    )}
+                    {item?.skill7 && (
+                      <li className="flex">
+                        <BsFillCheckCircleFill className="w-5 h-5 mr-2 text-teal-400" />
+                        {item.skill7}
+                      </li>
+                    )}
                   </div>
                   <div className="space-y-2">
-                    <li className="flex">
-                      <BsFillCheckCircleFill className="w-5 h-5 mr-2 text-teal-400" />
-                      {item.skill4}
-                    </li>
-                    <li className="flex">
-                      <BsFillCheckCircleFill className="w-5 h-5 mr-2 text-teal-400" />
-                      {item.skill5}
-                    </li>
-                    <li className="flex">
-                      <BsFillCheckCircleFill className="w-5 h-5 mr-2 text-teal-400" />
-                      {item.skill6}
-                    </li>
+                    {item?.skill2 && (
+                      <li className="flex">
+                        <BsFillCheckCircleFill className="w-5 h-5 mr-2 text-teal-400" />
+                        {item.skill2}
+                      </li>
+                    )}
+                    {item?.skill4 && (
+                      <li className="flex">
+                        <BsFillCheckCircleFill className="w-5 h-5 mr-2 text-teal-400" />
+                        {item.skill4}
+                      </li>
+                    )}
+                    {item?.skill6 && (
+                      <li className="flex">
+                        <BsFillCheckCircleFill className="w-5 h-5 mr-2 text-teal-400" />
+                        {item.skill6}
+                      </li>
+                    )}
+
+                    {item?.skill8 && (
+                      <li className="flex">
+                        <BsFillCheckCircleFill className="w-5 h-5 mr-2 text-teal-400" />
+                        {item.skill8}
+                      </li>
+                    )}
                   </div>
                 </ul>
                 <div className="flex space-x-8">

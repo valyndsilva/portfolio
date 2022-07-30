@@ -35,15 +35,21 @@ const scrollTo = (ele) => {
 const Home = ({
   heroInfo,
   aboutInfo,
+  servicesInfo,
+  educationInfo,
   testimonialsInfo,
   portfolioInfo,
   experienceInfo,
+  contactInfo,
 }) => {
   console.log(heroInfo);
   console.log(aboutInfo);
+  console.log(servicesInfo);
+  console.log(educationInfo);
   console.log(testimonialsInfo);
   console.log(portfolioInfo);
   console.log(experienceInfo);
+  console.log(contactInfo);
   const [visibleSection, setVisibleSection] = useState();
   const [clickedNav, setClickedNav] = useState();
 
@@ -134,14 +140,14 @@ const Home = ({
 
       <About aboutInfo={aboutInfo} aboutRef={aboutRef} />
 
-      <Services servicesRef={servicesRef} />
+      <Services servicesInfo={servicesInfo} servicesRef={servicesRef} />
 
       <Experience
         experienceInfo={experienceInfo}
         experienceRef={experienceRef}
       />
 
-      <Education educationRef={educationRef} />
+      <Education educationInfo={educationInfo} educationRef={educationRef} />
 
       <Portfolio portfolioInfo={portfolioInfo} portfolioRef={portfolioRef} />
 
@@ -150,7 +156,7 @@ const Home = ({
         testimonialsRef={testimonialsRef}
       />
 
-      <Contact contactRef={contactRef} />
+      <Contact contactInfo={contactInfo} contactRef={contactRef} />
 
       <Footer />
     </div>
@@ -188,10 +194,30 @@ export const getServerSideProps = async () => {
   const aboutInfo = await sanityClient.fetch(aboutQuery); // Fetch Posts from Sanity
   console.log(aboutInfo);
 
-  const testimonialsQuery = `*[_type == "testimonials"]{
+  const servicesQuery = `*[_type == "services"]{
+    title,
     description,
-   name,
- company,
+    service,
+  }`;
+  console.log(servicesQuery);
+
+  const servicesInfo = await sanityClient.fetch(servicesQuery); // Fetch Posts from Sanity
+  console.log(servicesInfo);
+
+  const educationQuery = `*[_type == "education"]{
+    title,
+    description,
+    course,
+  }`;
+  console.log(educationQuery);
+
+  const educationInfo = await sanityClient.fetch(educationQuery); // Fetch Posts from Sanity
+  console.log(educationInfo);
+
+  const testimonialsQuery = `*[_type == "testimonials"]{
+    title,
+    description,
+  testimonial,
   }`;
   console.log(testimonialsQuery);
 
@@ -199,48 +225,58 @@ export const getServerSideProps = async () => {
   console.log(testimonialsInfo);
 
   const portfolioQuery = `*[_type == "portfolio"]{
-    title,
-    description,
-    imgUrl,
-   skill1,
-   skill2,
-   skill3,
-   skill4,
-   skill5,
-   skill7,
-   skill8,
-   skill8,
- demoLink,
- githubLink,
+  title,
+  description,
+  imgUrl,
+  skill1,
+  skill2,
+  skill3,
+  skill4,
+  skill5,
+  skill7,
+  skill8,
+  skill8,
+  demoLink,
+  githubLink,
 
   }`;
   console.log(portfolioQuery);
 
   const portfolioInfo = await sanityClient.fetch(portfolioQuery);
 
-  const experienceQuery = `*[_type == "experience"]| order(_createdAt desc){
-    jobId,
-    jobTitle,
-    company,
-    startEndDate,
-    description1,
-    description2,
-    description3,
-    description4,
-
+  const experienceQuery = `*[_type == "experiences"]{
+    title,
+    description,
+    experience,
   }`;
   console.log(experienceQuery);
 
   const experienceInfo = await sanityClient.fetch(experienceQuery); // Fetch Posts from Sanity
   console.log(experienceInfo);
+
+  const contactQuery = `*[_type == "contact"]{
+    title,
+    description,
+    namePlaceholder,
+    emailPlaceholder,
+    messagePlaceholder
+  }`;
+  console.log(contactQuery);
+
+  const contactInfo = await sanityClient.fetch(contactQuery); // Fetch Posts from Sanity
+  console.log(contactInfo);
+
   return {
     // props:{} will be passed to the page component as props
     props: {
       heroInfo,
       aboutInfo,
+      servicesInfo,
+      educationInfo,
       testimonialsInfo,
       portfolioInfo,
       experienceInfo,
+      contactInfo,
     },
   };
 };

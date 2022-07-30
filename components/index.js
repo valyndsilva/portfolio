@@ -16,4 +16,3 @@ export { default as Layout } from "./Layout";
 export { default as SliderComp } from "./SliderComp";
 export { default as Services } from "./Services";
 export { default as Timeline } from "./Timeline";
-export { default as TimelineLeft } from "./TimelineLeft";

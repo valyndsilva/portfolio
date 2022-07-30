@@ -1,6 +1,6 @@
 export default {
-  name: "testimonials",
-  title: "Testimonials",
+  name: "education",
+  title: "Education",
   type: "document",
   fields: [
     {
@@ -8,16 +8,17 @@ export default {
       title: "Title",
       type: "string",
     },
+
     {
       name: "description",
       title: "Description",
       type: "string",
     },
     {
-      name: "testimonial",
-      title: "Testimonial",
+      name: "course",
+      title: "Course",
       type: "array",
-      of: [{ type: "testimonial" }],
+      of: [{ type: "course" }],
     },
   ],
 };

@@ -1,6 +1,8 @@
+import BsCodeSlash from "react-icons/bs";
+
 export default {
-  name: "testimonials",
-  title: "Testimonials",
+  name: "services",
+  title: "Services",
   type: "document",
   fields: [
     {
@@ -8,16 +10,17 @@ export default {
       title: "Title",
       type: "string",
     },
+
     {
       name: "description",
       title: "Description",
       type: "string",
     },
     {
-      name: "testimonial",
-      title: "Testimonial",
+      name: "service",
+      title: "Service",
       type: "array",
-      of: [{ type: "testimonial" }],
+      of: [{ type: "service" }],
     },
   ],
 };

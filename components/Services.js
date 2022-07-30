@@ -3,17 +3,17 @@ import { BsCodeSlash } from "react-icons/bs";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { SiBrandfolder } from "react-icons/si";
 import { Fade } from "react-awesome-reveal";
-function Services({ servicesRef }) {
+function Services({ servicesInfo, servicesRef }) {
   return (
     <section className="section flex-col" id="services" ref={servicesRef}>
       <div className="w-[70vw] md:w-[75vw] mx-auto pt-12">
-      <Fade direction="down" duration={1000}>
+        <Fade direction="down" duration={1000}>
           <div className="text-center mb-12">
             <h1 className="font-inter font-semibold dark:text-slate-300 text-5xl mb-4">
-              What Do I Do?
+              {servicesInfo[0].title}
             </h1>
             <p className="font-firacode text-md dark:text-slate-400 xl:w-2/4 lg:w-3/4 mx-auto">
-              Blue bottle crucifix vinyl post-ironic four dollar toast
+              {servicesInfo[0].description}
             </p>
             <div className="flex mt-6 justify-center">
               <div className="w-16 h-1 rounded-full bg-teal-400 inline-flex"></div>
@@ -29,11 +29,10 @@ function Services({ servicesRef }) {
               </div>
               <div className="flex-grow">
                 <h2 className="dark:text-slate-300 text-lg font-inter font-semibold mb-3">
-                  UI / UX Design
+                  {servicesInfo[0].service[0].title}
                 </h2>
                 <p className="leading-relaxed text-base dark:text-slate-400">
-                  I value simple content structure, clean design patterns, and
-                  thoughtful interactions.
+                  {servicesInfo[0].service[0].description}
                 </p>
               </div>
             </div>
@@ -42,12 +41,11 @@ function Services({ servicesRef }) {
                 <BsCodeSlash className="w-8 h-8 text-teal-400" />
               </div>
               <div className="flex-grow">
-                <h2 className="dark:text-slate-300 text-lg font-inter font-semibold mb-3  ">
-                  Front-End Developement
+                <h2 className="dark:text-slate-300 text-lg font-inter font-semibold mb-3">
+                  {servicesInfo[0].service[1].title}
                 </h2>
                 <p className="leading-relaxed text-base dark:text-slate-400">
-                  I like to code things from scratch, and enjoy bringing ideas
-                  to life in the browser.
+                  {servicesInfo[0].service[1].description}
                 </p>
               </div>
             </div>
@@ -57,11 +55,10 @@ function Services({ servicesRef }) {
               </div>
               <div className="flex-grow">
                 <h2 className="dark:text-slate-300 text-lg font-inter font-semibold mb-3">
-                  Branding
+                  {servicesInfo[0].service[2].title}
                 </h2>
                 <p className="leading-relaxed text-base dark:text-slate-400">
-                  I like to code things from scratch, and enjoy bringing ideas
-                  to life in the browser.
+                  {servicesInfo[0].service[2].description}
                 </p>
               </div>
             </div>

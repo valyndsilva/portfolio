@@ -5,9 +5,16 @@ import createSchema from "part:@sanity/base/schema-creator";
 import schemaTypes from "all:part:@sanity/base/schema-type";
 import hero from "./hero";
 import about from "./about";
-import testimonials from "./testimonials";
-import portfolio from "./portfolio";
+import service from "./service";
+import services from "./services";
 import experience from "./experience";
+import experiences from "./experiences";
+import course from "./course";
+import education from "./education";
+import portfolio from "./portfolio";
+import testimonial from "./testimonial";
+import testimonials from "./testimonials";
+import contact from "./contact";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -19,8 +26,15 @@ export default createSchema({
     /* Your types here! */
     hero,
     about,
-    portfolio,
-    testimonials,
+    service,
+    services,
     experience,
+    experiences,
+    course,
+    education,
+    portfolio,
+    testimonial,
+    testimonials,
+    contact,
   ]),
 });

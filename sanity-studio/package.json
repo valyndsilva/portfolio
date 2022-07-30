@@ -25,6 +25,8 @@
     "prop-types": "^15.7",
     "react": "^17.0",
     "react-dom": "^17.0",
+    "sanity-plugin-html-to-portable-text": "^0.0.7",
+    "sanity-plugin-icon-picker": "^2.0.2",
     "styled-components": "^5.2.0"
   },
   "devDependencies": {},

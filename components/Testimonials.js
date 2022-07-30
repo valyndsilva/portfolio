@@ -13,10 +13,10 @@ function Testimonials({ testimonialsInfo, testimonialsRef }) {
         <Fade direction="down" duration={1000}>
           <div className="text-center">
             <h1 className="font-inter font-semibold dark:text-slate-300 text-5xl mb-4">
-              What Clients Say About Me
+              {testimonialsInfo[0].title}
             </h1>
             <p className="font-firacode text-md dark:text-slate-400 xl:w-2/4 lg:w-3/4 mx-auto">
-              Blue bottle crucifix vinyl post-ironic four dollar toast
+              {testimonialsInfo[0].description}
             </p>
             <div className="flex mt-6 justify-center">
               <div className="w-16 h-1 rounded-full bg-teal-400 inline-flex"></div>
@@ -24,7 +24,7 @@ function Testimonials({ testimonialsInfo, testimonialsRef }) {
           </div>
         </Fade>
         <Fade direction="up" duration={2000}>
-          <SliderComp testimonialsInfo={testimonialsInfo} />
+          <SliderComp testimonialsInfo={testimonialsInfo[0].testimonial} />
         </Fade>
       </div>
     </section>
