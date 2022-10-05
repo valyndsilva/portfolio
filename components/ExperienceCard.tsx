@@ -19,7 +19,7 @@ export default function ExperienceCard({ item }: Props) {
   const working = item.isCurrentlyWorkingHere;
 
   return (
-    <article className="flex flex-col items-center opacity-70 dark:opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200 flex-shrink-0 snap-center relative group z-10">
+    <article className="flex flex-col items-center opacity-70 hover:opacity-100 dark:opacity-40 dark:hover:opacity-100 cursor-pointer transition-opacity duration-200 flex-shrink-0 snap-center relative group z-10">
       <div className="absolute -inset-0.5 bg-teal-400 opacity-0 rounded-lg blur-sm group-hover:opacity-100 group-hover:duration-200 transition duration-1000"></div>
 
       <div

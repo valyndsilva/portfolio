@@ -25,7 +25,7 @@ function Timeline({ item, index }: Props) {
           }hidden md:inline-flex`}
           aria-hidden="true"
         ></div>
-        <div className="relative group  opacity-70 dark:opacity-40 hover:opacity-100 cursor-pointer transition-opacity duration-200">
+        <div className="relative group  opacity-70 hover:opacity-100 dark:opacity-40 dark:hover:opacity-100  cursor-pointer transition-opacity duration-200">
           <div className="absolute -inset-0.5 bg-teal-400 opacity-0 rounded-lg blur-sm group-hover:opacity-100 group-hover:duration-200 transition duration-1000 "></div>
 
           <div className="bg-teal-50 border dark:border-none dark:bg-slate-800 rounded-md shadow-md  p-6 text-left relative">
