@@ -15,7 +15,7 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: [require("flowbite/plugin")],
+  plugins: [require("tailwind-scrollbar")],
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",

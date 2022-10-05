@@ -1,12 +1,13 @@
 import { addDoc, collection, Timestamp } from "firebase/firestore/lite";
 import { firestore } from "../firebaseConfig";
 
-export const sendContactForm = async ({ name, email, comment }) => {
+export const sendContactForm = async ({ name, email, subject, comment }) => {
   try {
     const ref = collection(firestore, "contact");
     await addDoc(ref, {
       name,
       email,
+      subject,
       comment,
       sentAt: Timestamp.now().toDate(),
     });

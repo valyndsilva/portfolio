@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer utilities {
+@layer utilities {
   .snap {
     scroll-snap-type: var(--scroll-snap-direction) var(--scroll-snap-constraint);
   }
@@ -15,19 +15,27 @@
   .snap-start {
     scroll-snap-align: start;
   }
-} */
+}
 
 @layer base {
   html {
-    @apply scroll-smooth;
+    /* fix framer-motion bug of expanding screen*/
+    overflow-x: hidden;
+    scroll-behavior: smooth;
   }
   ::-webkit-scrollbar {
-    @apply hidden;
+    /* @apply hidden;*/
   }
   body {
-    @apply scroll-smooth;
+    /* fix framer-motion bug of expanding screen*/
+    overflow-x: hidden;
+    /* fix framer-motion bug of expanding screen*/
+    position: relative;
+    scroll-behavior: smooth;
+    @apply overflow-x-hidden relative scroll-smooth;
   }
-/* 
+
+  /* 
   @font-face {
     font-family: "Inter";
     src: url("/fonts/Inter-VariableFont_slnt,wght.woff2") format("woff2");
@@ -55,7 +63,7 @@
   } */
 
   .section {
-    @apply min-h-screen w-full flex justify-center items-center z-20;
+    @apply  flex flex-col justify-center items-center z-20 min-h-screen mb-10 scroll-smooth;
   }
 
   .selected {
@@ -86,7 +94,7 @@
     @apply md:ml-0 md:mr-auto md:pl-0 md:pr-16;
   }
   .timeline-pointer {
-    @apply absolute inset-0 left-10 h-4 w-4 transform rotate-45  dark:bg-slate-800 sm:hidden md:inline-flex sm:top-11 sm:left-28 md:left-14;
+    @apply absolute inset-0 left-10 h-4 w-4 transform rotate-45  dark:bg-slate-800 opacity-40 sm:hidden md:inline-flex sm:top-11 sm:left-28 md:left-14;
   }
   .timeline-pointer-left {
     @apply md:left-auto md:right-14;
