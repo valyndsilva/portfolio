@@ -31,7 +31,7 @@ export default function ExperienceCard({ item }: Props) {
             {item.jobTitle}
           </h4>
           <p className="text-teal-400 mt-1">@ {item.company}</p>
-          <h6 className="uppercase dark:text-slate-400 mt-4 text-left font-firacode">
+          <h6 className=" dark:text-slate-400 mt-4 text-left font-firacode">
             {formattedStart} to {working ? "Present" : formattedEnd}
           </h6>
         </div>

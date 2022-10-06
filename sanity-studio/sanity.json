@@ -13,11 +13,14 @@
     "@sanity/default-login",
     "@sanity/desk-tool",
     "html-to-portable-text",
-    "icon-picker"
+    "icon-picker",
+    "@sanity/dashboard"
   ],
   "env": {
     "development": {
-      "plugins": ["@sanity/vision"]
+      "plugins": [
+        "@sanity/vision"
+      ]
     }
   },
   "parts": [

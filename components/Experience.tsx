@@ -9,8 +9,6 @@ type Props = {
 };
 
 export default function Experience({ experience, experienceRef }: Props) {
-  
-
   return (
     <section className="section" id="experience" ref={experienceRef}>
       <div className="w-[70vw] md:w-[75vw] mx-auto pt-12">

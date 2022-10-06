@@ -12,7 +12,7 @@ export default function Skill({ skill, directionLeft }: Props) {
     <div className="group relative flex cursor-pointer justify-center items-center mb-5">
       <motion.img
         initial={{
-          x: directionLeft ? -50 : 50,
+          x: directionLeft ? -200 : 200,
           opacity: 0,
         }}
         transition={{
