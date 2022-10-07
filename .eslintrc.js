@@ -4,9 +4,10 @@ module.exports = {
     es2021: true,
   },
   extends: [
-    "eslint:recommended",
     "plugin:react/recommended",
     "next/core-web-vitals",
+    "eslint:recommended",
+    "next",
   ],
   parserOptions: {
     ecmaFeatures: {
