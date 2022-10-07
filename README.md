@@ -93,3 +93,5 @@ https://nextjs.org/docs/advanced-features/custom-document
 
 npm install react-icons react-reveal swiper
 npm install @ap.cx/react-fullpage
+
+npm i --save-dev eslint-config-next
