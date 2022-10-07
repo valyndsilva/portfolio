@@ -24,7 +24,7 @@
   "parts": [
     {
       "name": "part:@sanity/base/schema",
-      "path": "./schemas/schema.ts"
+      "path": "./schemas/schema"
     },
     {
       "name": "part:@sanity/desk-tool/structure",
