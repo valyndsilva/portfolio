@@ -1,7 +1,7 @@
 module.exports = {
   env: {
     browser: true,
-    es6: true,
+    // es6: true,
     es2021: true,
   },
   extends: [
@@ -19,8 +19,8 @@ module.exports = {
   },
   plugins: ["react"],
   rules: {
-    "import/no-unresolved": [2, { ignore: ["^(all|part):"] }],
-    "react/no-unescaped-entities": "off",
-    "@next/next/no-page-custom-font": "off",
+    // "import/no-unresolved": [2, { ignore: ["^(all|part):"] }],
+    // "react/no-unescaped-entities": "off",
+    // "@next/next/no-page-custom-font": "off",
   },
 };
