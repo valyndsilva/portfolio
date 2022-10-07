@@ -95,3 +95,5 @@ npm install react-icons react-reveal swiper
 npm install @ap.cx/react-fullpage
 
 npm i --save-dev eslint-config-next
+npm install --save-dev @next/eslint-plugin-next
+npm run lint
