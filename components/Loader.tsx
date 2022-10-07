@@ -1,4 +1,4 @@
-export default `
+const loader = `
 body{
 display: block;
 }
@@ -108,3 +108,4 @@ display: block;
     animation-delay: .3s;
   }
 }`;
+export default loader;

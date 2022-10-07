@@ -1,13 +1,5 @@
 import type { GetStaticProps } from "next";
 import {
-  Dispatch,
-  MutableRefObject,
-  SetStateAction,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
-import {
   Hero,
   About,
   Skills,

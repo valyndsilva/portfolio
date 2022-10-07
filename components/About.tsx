@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { BsFillCheckCircleFill } from "react-icons/bs";
 import Image from "next/image";
 import { IAbout } from "../types/typings";

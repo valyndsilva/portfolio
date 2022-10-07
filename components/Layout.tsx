@@ -1,5 +1,5 @@
+import React from "react";
 import Head from "next/head";
-import { Header, Hero, Footer } from ".";
 
 type Props = { children?: React.ReactNode };
 const Layout = ({ children }: Props) => {

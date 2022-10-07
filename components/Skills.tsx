@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { ISkills } from "../types/typings";
 import { motion } from "framer-motion";
 import Skill from "./Skill";
-import { useInView } from "react-intersection-observer";
 
 type Props = {
   skills: ISkills;
@@ -45,13 +44,13 @@ export default function skills({ skills, skillsRef }: Props) {
           ))} */}
           {skills?.technologies
             ?.slice(0, skills.technologies.length / 2)
-            .map((skill, index) => (
+            .map((skill) => (
               <Skill key={skill._id} skill={skill} />
             ))}
 
           {skills?.technologies
             ?.slice(skills.technologies.length / 2, skills.technologies.length)
-            .map((skill, index) => (
+            .map((skill) => (
               <Skill key={skill._id} skill={skill} directionLeft />
             ))}
         </div>

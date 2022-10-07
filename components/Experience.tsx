@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { IExperience } from "../types/typings";
 import { motion } from "framer-motion";
 import ExperienceCard from "./ExperienceCard";

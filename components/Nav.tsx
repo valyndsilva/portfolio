@@ -9,7 +9,7 @@ import { MdOutlineMiscellaneousServices, MdWorkOutline } from "react-icons/md";
 import { motion } from "framer-motion";
 
 interface Props {
-  scrollTo(event: React.MouseEvent<HTMLButtonElement>): void;
+  scrollTo: any;
   heroIsVisible: boolean;
   aboutIsVisible: boolean;
   skillsIsVisible: boolean;

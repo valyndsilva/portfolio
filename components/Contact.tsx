@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef} from "react";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { BiPaperPlane } from "react-icons/bi";
 import { sendContactForm } from "../services";

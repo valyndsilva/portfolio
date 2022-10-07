@@ -7,11 +7,6 @@ import Logo from "./Logo";
 const Header = () => {
   const { systemTheme, theme, setTheme } = useTheme();
 
-  const navigations = [
-    { label: "Home", path: "/" },
-    { label: "About", path: "/about" },
-  ];
-
   // To fix hydration UI mismatch issues, we need to wait until the component has mounted.
   const [mounted, setMounted] = useState(false);
 

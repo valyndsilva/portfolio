@@ -11,7 +11,7 @@ type Props = {
 
 export default function Hero({ hero, heroRef}: Props) {
   // console.log(hero);
-  const [text, count] = useTypewriter({
+  const [text] = useTypewriter({
     words: [hero.jobTitle[0], hero.jobTitle[1], hero.jobTitle[2]],
     loop: true,
     delaySpeed: 2000,
