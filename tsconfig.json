@@ -25,10 +25,11 @@
     "tailwind.config.js",
     "firebaseConfig.js",
     "./types",
-    "lib/sanity.server.js",
-    "lib/config.js",
-    "lib/sanity.js",
-    "./sanity-studio/node_modules/@sanity/base/types/**/*.ts"
+    "./lib/sanity.server.js",
+    "./lib/config.js",
+    "./lib/sanity.js",
+    "./sanity-studio/node_modules/@sanity/base/types/**/*.ts",
+    "./sanity-studio/node_modules/@sanity/base/types/**/*.js"
   ],
   "exclude": ["node_modules"]
 }
