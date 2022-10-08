@@ -34,10 +34,9 @@ module.exports = {
   },
   plugins: ["react", "@typescript-eslint"],
   rules: {
+    "import/no-unresolved": [2, { ignore: ["^(all|part):"] }],
     "react/no-unescaped-entities": "off",
     "@next/next/no-page-custom-font": "off",
-    "import/no-unresolved": [2, { ignore: ["^(all|part):"] }],
-    "import/extensions": "off",
     "import/no-anonymous-default-export": "off",
     "@typescript-eslint/ban-types": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
