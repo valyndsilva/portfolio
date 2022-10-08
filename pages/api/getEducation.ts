@@ -4,9 +4,9 @@ import { sanityClient } from "../../lib/sanity.server";
 import { educationQuery } from "../../utils/queries";
 import { IEducation } from "../../types/typings";
 
-type Data = {
+interface Data {
   education: IEducation;
-};
+}
 
 export default async function handler(
   req: NextApiRequest,

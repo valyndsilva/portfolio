@@ -3,10 +3,11 @@ import { IExperience } from "../types/typings";
 import { motion } from "framer-motion";
 import ExperienceCard from "./ExperienceCard";
 
-type Props = {
+interface Props {
   experience: IExperience;
+  /* eslint-disable */
   experienceRef: any;
-};
+}
 
 export default function Experience({ experience, experienceRef }: Props) {
   return (

@@ -4,9 +4,9 @@ import { sanityClient } from "../../lib/sanity.server";
 import { portfolioQuery } from "../../utils/queries";
 import { IPortfolio } from "../../types/typings";
 
-type Data = {
+interface Data {
   portfolio: IPortfolio[];
-};
+}
 
 export default async function handler(
   req: NextApiRequest,

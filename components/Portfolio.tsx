@@ -8,10 +8,11 @@ import { urlFor } from "../lib/sanity";
 import { IPortfolio } from "../types/typings";
 import { motion } from "framer-motion";
 
-type Props = {
+interface Props {
   portfolio: IPortfolio;
+  /* eslint-disable */
   portfolioRef: any;
-};
+}
 
 export default function Portfolio({ portfolio, portfolioRef }: Props) {
   return (
@@ -121,7 +122,7 @@ export default function Portfolio({ portfolio, portfolioRef }: Props) {
 
                     <div className="items-center space-y-2">
                       <ul className="text-sm font-firacode dark:text-slate-400 mb-10 grid grid-cols-2 gap-6 ">
-                        {item?.skills &&
+                        {item?.skills.length > 0 &&
                           item.skills.map((project, index) => (
                             <li key={index} className="flex">
                               <BsFillCheckCircleFill className="w-5 h-5 mr-2 text-teal-400" />

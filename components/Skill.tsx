@@ -2,16 +2,19 @@ import React from "react";
 import { Technology } from "../types/typings";
 import { urlFor } from "../lib/sanity";
 import { motion } from "framer-motion";
-type Props = {
+
+interface Props {
   skill: Technology;
+  /* eslint-disable */
   directionLeft?: any;
-};
+}
 
 export default function Skill({ skill, directionLeft }: Props) {
   return (
     <div className="group relative flex cursor-pointer justify-center items-center mb-5">
       <motion.img
         initial={{
+          // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
           x: directionLeft ? -200 : 200,
           opacity: 0,
         }}

@@ -3,10 +3,11 @@ import { ISkills } from "../types/typings";
 import { motion } from "framer-motion";
 import Skill from "./Skill";
 
-type Props = {
+interface Props {
   skills: ISkills;
+  /* eslint-disable */
   skillsRef: any;
-};
+}
 
 export default function skills({ skills, skillsRef }: Props) {
   return (

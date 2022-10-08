@@ -1,14 +1,15 @@
-import React, { useState, useRef} from "react";
+import React, { useState, useRef } from "react";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { BiPaperPlane } from "react-icons/bi";
 import { sendContactForm } from "../services";
 import { IContact } from "../types/typings";
 import { motion } from "framer-motion";
 
-type Props = {
+interface Props {
   contact: IContact;
+  /* eslint-disable */
   contactRef: any;
-};
+}
 
 export default function Contact({ contact, contactRef }: Props) {
   const [message, setMessage] = useState("");
@@ -23,7 +24,7 @@ export default function Contact({ contact, contactRef }: Props) {
       subject: e.target[2].value,
       comment: e.target[3].value,
     });
-    if (res == 0) {
+    if (res === 0) {
       setMessage("Thank you for your valuable comment!");
       // formRef.current?.reset();
       // document.getElementById("contact-form").reset();
@@ -66,7 +67,7 @@ export default function Contact({ contact, contactRef }: Props) {
         </motion.div>
 
         <div className="flex flex-col space-y-5 space-x-4 items-center">
-          {message && (
+          {message.length > 0 && (
             <div className="flex justify-center border p-4 rounded-lg">
               {message}
               <span
@@ -93,6 +94,7 @@ export default function Contact({ contact, contactRef }: Props) {
             viewport={{ once: false }}
             id="contact-form"
             ref={formRef}
+            // eslint-disable-next-line @typescript-eslint/no-misused-promises
             onSubmit={submitContact}
             className="flex flex-wrap -m-2 md:w-1/2 mx-auto"
           >

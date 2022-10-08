@@ -4,9 +4,9 @@ import { sanityClient } from "../../lib/sanity.server";
 import { skillsQuery } from "../../utils/queries";
 import { ISkills } from "../../types/typings";
 
-type Data = {
+interface Data {
   skills: ISkills;
-};
+}
 
 export default async function handler(
   req: NextApiRequest,

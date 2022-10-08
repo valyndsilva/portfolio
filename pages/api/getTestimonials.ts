@@ -4,14 +4,16 @@ import { sanityClient } from "../../lib/sanity.server";
 import { testimonialsQuery } from "../../utils/queries";
 import { ITestimonials } from "../../types/typings";
 
-type Data = {
+interface Data {
   testimonials: ITestimonials;
-};
+}
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  const testimonials: ITestimonials = await sanityClient.fetch(testimonialsQuery());
+  const testimonials: ITestimonials = await sanityClient.fetch(
+    testimonialsQuery()
+  );
   res.status(200).json({ testimonials });
 }

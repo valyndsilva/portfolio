@@ -1,3 +1,4 @@
+import React from "react";
 import type { GetStaticProps } from "next";
 import {
   Hero,
@@ -35,7 +36,7 @@ import {
 } from "../utils";
 import { useInView } from "react-intersection-observer";
 
-type Props = {
+interface Props {
   hero: IHero;
   about: IAbout;
   skills: ISkills;
@@ -44,7 +45,7 @@ type Props = {
   portfolio: IPortfolio;
   testimonials: ITestimonials;
   contact: IContact;
-};
+}
 
 function Home({
   hero,
@@ -68,7 +69,9 @@ function Home({
   // https://www.codedaily.io/tutorials/Sticky-Header-with-Highlighting-Sections-on-Scroll
 
   // Click To Scroll
-  const scrollTo = (ref: any) => {
+  const scrollTo = (ref: {
+    scrollIntoView: (arg0: { behavior: string; block: string }) => void;
+  }) => {
     ref?.scrollIntoView({
       behavior: "smooth",
       block: "start",

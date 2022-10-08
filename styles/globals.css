@@ -63,7 +63,7 @@
   } */
 
   .section {
-    @apply  flex flex-col justify-center items-center z-20 min-h-screen mb-10 scroll-smooth;
+    @apply flex flex-col justify-center items-center z-20 min-h-screen mb-10 scroll-smooth;
   }
 
   .selected {

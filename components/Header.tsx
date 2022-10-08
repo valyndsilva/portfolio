@@ -1,5 +1,5 @@
 import { useTheme } from "next-themes";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { BsFillSunFill, BsFillMoonStarsFill } from "react-icons/bs";
 import Logo from "./Logo";
 // import CV from "../assets/CV.pdf";

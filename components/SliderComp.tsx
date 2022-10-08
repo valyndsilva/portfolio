@@ -12,9 +12,9 @@ import "swiper/css/autoplay";
 
 import { ITestimonials } from "../types/typings";
 
-type Props = {
+interface Props {
   testimonials: ITestimonials;
-};
+}
 
 function SliderComp({ testimonials }: Props) {
   return (

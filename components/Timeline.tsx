@@ -1,9 +1,9 @@
 import React from "react";
 import { Course } from "../types/typings";
-type Props = {
+interface Props {
   item: Course;
   index: number;
-};
+}
 function Timeline({ item, index }: Props) {
   return (
     <div className="relative z-10">
@@ -12,14 +12,14 @@ function Timeline({ item, index }: Props) {
       </div>
       <div
         className={`${
-          index % 2 == 0
+          index % 2 === 0
             ? "timeline-container timeline-container-left"
             : "timeline-container"
         }`}
       >
         <div
           className={`${
-            index % 2 == 0
+            index % 2 === 0
               ? "timeline-pointer timeline-pointer-left  "
               : "timeline-pointer"
           }hidden md:inline-flex`}

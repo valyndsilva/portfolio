@@ -2,9 +2,9 @@ import React from "react";
 import { BsDot } from "react-icons/bs";
 import { Company } from "../types/typings";
 
-type Props = {
+interface Props {
   item: Company;
-};
+}
 export default function ExperienceCard({ item }: Props) {
   const start = item.startDate;
   const end = item.endDate;

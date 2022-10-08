@@ -1,3 +1,5 @@
+/* eslint-disable import/no-unresolved */
+
 // First, we must import the schema creator
 import createSchema from "part:@sanity/base/schema-creator";
 
@@ -16,7 +18,6 @@ import portfolio from "./portfolio";
 import testimonial from "./testimonial";
 import testimonials from "./testimonials";
 import contact from "./contact";
-
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({

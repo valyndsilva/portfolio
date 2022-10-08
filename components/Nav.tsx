@@ -9,7 +9,16 @@ import { MdOutlineMiscellaneousServices, MdWorkOutline } from "react-icons/md";
 import { motion } from "framer-motion";
 
 interface Props {
+  /* eslint-disable */
   scrollTo: any;
+  heroRef: any;
+  aboutRef: any;
+  skillsRef: any;
+  experienceRef: any;
+  educationRef: any;
+  portfolioRef: any;
+  testimonialsRef: any;
+  contactRef: any;
   heroIsVisible: boolean;
   aboutIsVisible: boolean;
   skillsIsVisible: boolean;
@@ -19,14 +28,6 @@ interface Props {
   testimonialsIsVisible: boolean;
   contactIsVisible: boolean;
   footerIsVisible: boolean;
-  heroRef: any;
-  aboutRef: any;
-  skillsRef: any;
-  experienceRef: any;
-  educationRef: any;
-  portfolioRef: any;
-  testimonialsRef: any;
-  contactRef: any;
 }
 
 function Nav({
@@ -91,7 +92,7 @@ function Nav({
           <a>
             <AiOutlineHome
               className={` ${
-                heroIsVisible === true && aboutIsVisible == false
+                heroIsVisible === true && aboutIsVisible === false
                   ? "selected"
                   : ""
               } 

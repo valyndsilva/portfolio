@@ -1,10 +1,10 @@
 import React from "react";
 
-type Props = {
+interface Props {
   children?: React.ReactNode;
   className: string;
   onClick?: () => void;
-};
+}
 const ToggleButton = ({ children, className, onClick }: Props) => {
   return (
     <button

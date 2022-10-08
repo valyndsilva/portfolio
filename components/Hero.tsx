@@ -4,12 +4,13 @@ import { motion } from "framer-motion";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
 
-type Props = {
+interface Props {
   hero: IHero;
+  /* eslint-disable */
   heroRef: any;
-};
+}
 
-export default function Hero({ hero, heroRef}: Props) {
+export default function Hero({ hero, heroRef }: Props) {
   // console.log(hero);
   const [text] = useTypewriter({
     words: [hero.jobTitle[0], hero.jobTitle[1], hero.jobTitle[2]],
@@ -54,7 +55,6 @@ export default function Hero({ hero, heroRef}: Props) {
         {text}
         <Cursor cursorColor="teal" />
       </motion.h3>
-    
     </section>
   );
 }

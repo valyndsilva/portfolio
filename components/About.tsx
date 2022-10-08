@@ -5,12 +5,13 @@ import { IAbout } from "../types/typings";
 import { motion } from "framer-motion";
 import { urlFor } from "../lib/sanity";
 
-type Props = {
+interface Props {
   about: IAbout;
+  /* eslint-disable */
   aboutRef: any;
-};
+}
 
-export default function About({ about, aboutRef}: Props) {
+export default function About({ about, aboutRef }: Props) {
   return (
     <section className="section text-left" id="about" ref={aboutRef}>
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-center w-[70vw] md:w-[80vw] mx-auto pt-12">

@@ -4,9 +4,9 @@ import { sanityClient } from "../../lib/sanity.server";
 import { aboutQuery } from "../../utils/queries";
 import { IAbout } from "../../types/typings";
 
-type Data = {
+interface Data {
   about: IAbout;
-};
+}
 
 export default async function handler(
   req: NextApiRequest,

@@ -18,7 +18,7 @@ export default {
       name: "courseList",
       title: "Course List",
       type: "array",
-      of: [{ type:"reference", to:[{type: "course"}] }],
+      of: [{ type: "reference", to: [{ type: "course" }] }],
     },
   ],
 };

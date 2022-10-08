@@ -1,9 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-type Props = {
+interface Props {
+  /* eslint-disable */
   footerRef: any;
-};
+}
 
 function Footer({ footerRef }: Props) {
   // 👇️ Get current Year

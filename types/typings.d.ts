@@ -1,5 +1,3 @@
-import { Url } from "url";
-
 interface SanityBody {
   _createdAt?: string;
   _id?: string;

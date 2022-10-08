@@ -1,6 +1,6 @@
 import { IEducation } from "../types/typings";
 
- const fetchEducation = async () => {
+const fetchEducation = async () => {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_BASE_URL}/api/getEducation`
   );

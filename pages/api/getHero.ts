@@ -4,9 +4,9 @@ import { sanityClient } from "../../lib/sanity.server";
 import { heroQuery } from "../../utils/queries";
 import { IHero } from "../../types/typings";
 
-type Data = {
+interface Data {
   hero: IHero;
-};
+}
 
 export default async function handler(
   req: NextApiRequest,

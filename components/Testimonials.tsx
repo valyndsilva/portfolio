@@ -3,13 +3,13 @@ import SliderComp from "./SliderComp";
 import { ITestimonials } from "../types/typings";
 import { motion } from "framer-motion";
 
-type Props = {
+interface Props {
   testimonials: ITestimonials;
+  /* eslint-disable */
   testimonialsRef: any;
-};
+}
 
 export default function Testimonials({ testimonials, testimonialsRef }: Props) {
-
   return (
     <section className="section" id="testimonials" ref={testimonialsRef}>
       <div className="w-[70vw] md:w-[75vw] mx-auto pt-12">

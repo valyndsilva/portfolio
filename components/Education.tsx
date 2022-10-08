@@ -3,13 +3,13 @@ import Timeline from "./Timeline";
 import { IEducation } from "../types/typings";
 import { motion } from "framer-motion";
 
-type Props = {
+interface Props {
   education: IEducation;
+  /* eslint-disable */
   educationRef: any;
-};
+}
 
 export default function Education({ education, educationRef }: Props) {
- 
   return (
     <section className="section" id="education" ref={educationRef}>
       <div className="w-[70vw] md:w-[75vw] mx-auto pt-12">
