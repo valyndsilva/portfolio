@@ -13,5 +13,5 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   const skills: ISkills = await sanityClient.fetch(skillsQuery());
-  skills && res.status(200).json({ skills });
+  res.status(200).json({ skills });
 }
