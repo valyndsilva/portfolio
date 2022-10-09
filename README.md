@@ -286,18 +286,24 @@ In the .eslintrc.js in the root add to extends:
  project: "./tsconfig.json",
 ```
 
-Type error: Cannot find module 'part:@sanity/base/schema-creator' or its corresponding type declarations.
-
-npm install --save-dev @next/eslint-plugin-next
-npm install @typescript-eslint/parser
-npm install eslint-import-resolver-node --save-dev
-
 npm install --save-dev eslint
 npm install --save-dev eslint-plugin-react
 
+Type error: Cannot find module 'part:@sanity/base/schema-creator' or its corresponding type declarations.
 To remove the error: Type error: Cannot find module 'part:@sanity/base/schema-creator' or its corresponding type declarations.
 In schema.ts at the top:
 
 ```
 /// <reference types="@sanity/types/parts" />
 ```
+
+Deploy to Vercel
+Install and configure Vercel CLI.
+$ npm i -g vercel
+In terminal, at the root of the project write:
+$ vercel
+
+When you run npm run build you might receive an error like:
+rror occurred prerendering page "/". Read more: https://nextjs.org/docs/messages/prerender-error
+FetchError: invalid json response body at http://localhost:3000/api/getHero reason: Unexpected token < in JSON at position 0
+If this happens switvh from ISR to SSR in index.tsx.

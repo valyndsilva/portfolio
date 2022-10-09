@@ -13,5 +13,11 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   const education: IEducation = await sanityClient.fetch(educationQuery());
-  res.status(200).json({ education });
+  // res.status(200).json({ education });
+
+    try {
+      res.status(200).json({education});
+    } catch (err: any) {
+      console.log("Error: ", err.message);
+    }
 }

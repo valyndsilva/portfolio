@@ -13,5 +13,12 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   const contact: IContact = await sanityClient.fetch(contactQuery());
-  res.status(200).json({ contact });
+  // res.status(200).json({ contact });
+
+  
+  try {
+    res.status(200).json({ contact });
+  } catch (err: any) {
+    console.log("Error: ", err.message);
+  }
 }

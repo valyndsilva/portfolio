@@ -1,5 +1,5 @@
 import React from "react";
-import type { GetStaticProps } from "next";
+import type { GetServerSideProps, GetStaticProps } from "next";
 import {
   Hero,
   About,
@@ -82,45 +82,45 @@ function Home({
   // https://spacejelly.dev/posts/how-to-trigger-a-function-when-scrolling-to-an-element-in-react-intersection-observer/
 
   const { ref: heroRef, inView: heroIsVisible } = useInView({ threshold: 0 });
-  console.log("hero", heroIsVisible);
+  // console.log("hero", heroIsVisible);
 
   const { ref: aboutRef, inView: aboutIsVisible } = useInView({ threshold: 0 });
-  console.log("about", aboutIsVisible);
+  // console.log("about", aboutIsVisible);
 
   const { ref: skillsRef, inView: skillsIsVisible } = useInView({
     threshold: 0,
   });
-  console.log("skills", skillsIsVisible);
+  // console.log("skills", skillsIsVisible);
 
   const { ref: experienceRef, inView: experienceIsVisible } = useInView({
     threshold: 0,
   });
-  console.log("experience", experienceIsVisible);
+  // console.log("experience", experienceIsVisible);
 
   const { ref: educationRef, inView: educationIsVisible } = useInView({
     threshold: 0,
   });
-  console.log("education", educationIsVisible);
+  // console.log("education", educationIsVisible);
 
   const { ref: portfolioRef, inView: portfolioIsVisible } = useInView({
     threshold: 0,
   });
-  console.log("portfolio", portfolioIsVisible);
+  // console.log("portfolio", portfolioIsVisible);
 
   const { ref: testimonialsRef, inView: testimonialsIsVisible } = useInView({
     threshold: 0,
   });
-  console.log("testimonials", testimonialsIsVisible);
+  // console.log("testimonials", testimonialsIsVisible);
 
   const { ref: contactRef, inView: contactIsVisible } = useInView({
     threshold: 0,
   });
-  console.log("contact", contactIsVisible);
+  // console.log("contact", contactIsVisible);
 
   const { ref: footerRef, inView: footerIsVisible } = useInView({
     threshold: 0,
   });
-  console.log("footer", footerIsVisible);
+  // console.log("footer", footerIsVisible);
 
   return (
     <div className="flex flex-col w-full items-center justify-center px-20 text-center bg-teal-50 dark:bg-slate-900 snap-y snap-mandatory">
@@ -164,8 +164,35 @@ function Home({
 
 export default Home;
 
-// Incremental static regeneration
-export const getStaticProps: GetStaticProps<Props> = async () => {
+// // Incremental static regeneration
+// export const getStaticProps: GetStaticProps<Props> = async () => {
+//   const hero: IHero = await fetchHero();
+//   const about: IAbout = await fetchAbout();
+//   const skills: ISkills = await fetchSkills();
+//   const experience: IExperience = await fetchExperience();
+//   const education: IEducation = await fetchEducation();
+//   const portfolio: IPortfolio = await fetchPortfolio();
+//   const testimonials: ITestimonials = await fetchTestimonials();
+//   const contact: IContact = await fetchContact();
+
+//   return {
+//     props: {
+//       hero,
+//       about,
+//       skills,
+//       experience,
+//       education,
+//       portfolio,
+//       testimonials,
+//       contact,
+//     },
+//     // NextJS attempts to revalidate the page when a request comes in every 10 seconds
+//     revalidate: 60, // For ISR only
+//   };
+// };
+
+// Server-Side Rendering
+export const getServerSideProps: GetServerSideProps = async () => {
   const hero: IHero = await fetchHero();
   const about: IAbout = await fetchAbout();
   const skills: ISkills = await fetchSkills();
@@ -186,7 +213,5 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       testimonials,
       contact,
     },
-    // NextJS attempts to revalidate the page when a request comes in every 10 seconds
-    revalidate: 60,
   };
 };

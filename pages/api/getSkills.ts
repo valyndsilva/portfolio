@@ -13,5 +13,10 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   const skills: ISkills = await sanityClient.fetch(skillsQuery());
-  res.status(200).json({ skills });
+  // res.status(200).json({ skills });
+    try {
+      res.status(200).json({skills});
+    } catch (err: any) {
+      console.log("Error: ", err.message);
+    }
 }
