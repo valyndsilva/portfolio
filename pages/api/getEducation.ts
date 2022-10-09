@@ -13,5 +13,5 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   const education: IEducation = await sanityClient.fetch(educationQuery());
-  res.status(200).json({ education });
+  education && res.status(200).json({ education });
 }

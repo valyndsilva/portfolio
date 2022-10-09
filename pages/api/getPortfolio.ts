@@ -13,5 +13,5 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   const portfolio: IPortfolio[] = await sanityClient.fetch(portfolioQuery());
-  res.status(200).json({ portfolio });
+  portfolio && res.status(200).json({ portfolio });
 }

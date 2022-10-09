@@ -15,5 +15,5 @@ export default async function handler(
   const testimonials: ITestimonials = await sanityClient.fetch(
     testimonialsQuery()
   );
-  res.status(200).json({ testimonials });
+  testimonials && res.status(200).json({ testimonials });
 }

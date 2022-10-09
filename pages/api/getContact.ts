@@ -13,5 +13,5 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   const contact: IContact = await sanityClient.fetch(contactQuery());
-  res.status(200).json({ contact });
+  contact && res.status(200).json({ contact });
 }

@@ -13,5 +13,5 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   const about: IAbout = await sanityClient.fetch(aboutQuery());
-  res.status(200).json({ about });
+  about && res.status(200).json({ about });
 }

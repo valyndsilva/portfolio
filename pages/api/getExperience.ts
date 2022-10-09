@@ -13,5 +13,5 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   const experience: IExperience = await sanityClient.fetch(experienceQuery());
-  res.status(200).json({ experience });
+  experience && res.status(200).json({ experience });
 }
