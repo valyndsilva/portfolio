@@ -4,6 +4,7 @@
   // here will be ignored.
   "include": [
     "./node_modules/@sanity/base/types/**/*.ts",
+    "./sanity-studio/schemas/schema.ts",
     "./**/*.ts",
     "./**/*.tsx"
   ],

@@ -286,6 +286,8 @@ In the .eslintrc.js in the root add to extends:
  project: "./tsconfig.json",
 ```
 
+Type error: Cannot find module 'part:@sanity/base/schema-creator' or its corresponding type declarations.
+
 npm install --save-dev @next/eslint-plugin-next
 npm install @typescript-eslint/parser
 npm install eslint-import-resolver-node --save-dev
