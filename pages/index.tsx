@@ -1,5 +1,5 @@
 import React from "react";
-import type { GetServerSideProps, GetStaticProps } from "next";
+import type { GetServerSideProps } from "next";
 import {
   Hero,
   About,
@@ -163,33 +163,6 @@ function Home({
 }
 
 export default Home;
-
-// // Incremental static regeneration
-// export const getStaticProps: GetStaticProps<Props> = async () => {
-//   const hero: IHero = await fetchHero();
-//   const about: IAbout = await fetchAbout();
-//   const skills: ISkills = await fetchSkills();
-//   const experience: IExperience = await fetchExperience();
-//   const education: IEducation = await fetchEducation();
-//   const portfolio: IPortfolio = await fetchPortfolio();
-//   const testimonials: ITestimonials = await fetchTestimonials();
-//   const contact: IContact = await fetchContact();
-
-//   return {
-//     props: {
-//       hero,
-//       about,
-//       skills,
-//       experience,
-//       education,
-//       portfolio,
-//       testimonials,
-//       contact,
-//     },
-//     // NextJS attempts to revalidate the page when a request comes in every 10 seconds
-//     revalidate: 60, // For ISR only
-//   };
-// };
 
 // Server-Side Rendering
 export const getServerSideProps: GetServerSideProps = async () => {
