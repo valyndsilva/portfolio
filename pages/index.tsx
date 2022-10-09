@@ -34,6 +34,7 @@ import {
   fetchTestimonials,
   fetchContact,
 } from "../utils";
+
 import { useInView } from "react-intersection-observer";
 
 interface Props {
