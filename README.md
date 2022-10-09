@@ -291,3 +291,13 @@ Type error: Cannot find module 'part:@sanity/base/schema-creator' or its corresp
 npm install --save-dev @next/eslint-plugin-next
 npm install @typescript-eslint/parser
 npm install eslint-import-resolver-node --save-dev
+
+npm install --save-dev eslint
+npm install --save-dev eslint-plugin-react
+
+To remove the error: Type error: Cannot find module 'part:@sanity/base/schema-creator' or its corresponding type declarations.
+In schema.ts at the top:
+
+```
+/// <reference types="@sanity/types/parts" />
+```

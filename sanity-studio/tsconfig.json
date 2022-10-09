@@ -7,8 +7,5 @@
     "./schemas/schema.ts",
     "./**/*.ts",
     "./**/*.tsx"
-  ],
-  "compilerOptions": {
-    "jsx": "react"
-  }
+  ]
 }
