@@ -3,7 +3,7 @@ import { ThemeProvider } from "next-themes";
 import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import "../styles/globals.css";
-function MyApp ({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: AppProps) {
   // To fix hydration UI mismatch issues, we need to wait until the component has mounted.
   const [mounted, setMounted] = useState(false);
   useEffect(() => {

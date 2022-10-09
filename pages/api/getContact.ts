@@ -15,7 +15,6 @@ export default async function handler(
   const contact: IContact = await sanityClient.fetch(contactQuery());
   // res.status(200).json({ contact });
 
-  
   try {
     res.status(200).json({ contact });
   } catch (err: any) {

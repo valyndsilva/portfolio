@@ -1,7 +1,7 @@
 import React from "react";
 import { Html, Head, Main, NextScript } from "next/document";
 import loader from "../components/Loader";
-export default function Document () {
+export default function Document() {
   return (
     <Html>
       <Head>

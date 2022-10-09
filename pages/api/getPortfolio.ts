@@ -14,9 +14,9 @@ export default async function handler(
 ) {
   const portfolio: IPortfolio[] = await sanityClient.fetch(portfolioQuery());
   // res.status(200).json({ portfolio });
-    try {
-      res.status(200).json({portfolio});
-    } catch (err: any) {
-      console.log("Error: ", err.message);
-    }
+  try {
+    res.status(200).json({ portfolio });
+  } catch (err: any) {
+    console.log("Error: ", err.message);
+  }
 }

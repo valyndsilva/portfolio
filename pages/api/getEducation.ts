@@ -15,9 +15,9 @@ export default async function handler(
   const education: IEducation = await sanityClient.fetch(educationQuery());
   // res.status(200).json({ education });
 
-    try {
-      res.status(200).json({education});
-    } catch (err: any) {
-      console.log("Error: ", err.message);
-    }
+  try {
+    res.status(200).json({ education });
+  } catch (err: any) {
+    console.log("Error: ", err.message);
+  }
 }

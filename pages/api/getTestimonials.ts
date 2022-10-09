@@ -16,9 +16,9 @@ export default async function handler(
     testimonialsQuery()
   );
   // res.status(200).json({ testimonials });
-    try {
-      res.status(200).json({testimonials});
-    } catch (err: any) {
-      console.log("Error: ", err.message);
-    }
+  try {
+    res.status(200).json({ testimonials });
+  } catch (err: any) {
+    console.log("Error: ", err.message);
+  }
 }

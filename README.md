@@ -97,9 +97,10 @@ npm install @ap.cx/react-fullpage
 # Setting up Nextjs with typescript,eslint and prettier:
 
 ```
-npm install eslint --save-dev
-npm install eslint-config-next
+npm install --save-dev eslint
+npm install --save-dev eslint-plugin-react
 npm install --save-dev @next/eslint-plugin-next
+npm install eslint-config-next
 npx eslint --init
 npm install --save-dev prettier
 ```
@@ -196,7 +197,7 @@ npm install
 
 A .husky folder is created with a sample pre-commmit.json file
 
-In packege.json we create 5 different scripts to test various things:
+In package.json we create 5 different scripts to test various things:
 // Runs tsc command on cli and pretty print any warnings or errors that it produces
 "check-types": "tsc --pretty --noEmit",
 // asks prettier to check all the files excluding the ones in the prettierignore file for formatting issues.
@@ -215,7 +216,7 @@ The package.json scripts will look like this:
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "next lint --no-cache",
     "prepare": "husky install",
     "check-types": "tsc --pretty --noEmit",
     "check-format": "prettier --check",
@@ -286,10 +287,9 @@ In the .eslintrc.js in the root add to extends:
  project: "./tsconfig.json",
 ```
 
-npm install --save-dev eslint
-npm install --save-dev eslint-plugin-react
 
-Type error: Cannot find module 'part:@sanity/base/schema-creator' or its corresponding type declarations.
+
+## Type error: Cannot find module 'part:@sanity/base/schema-creator' or its corresponding type declarations.
 To remove the error: Type error: Cannot find module 'part:@sanity/base/schema-creator' or its corresponding type declarations.
 In schema.ts at the top:
 
@@ -297,7 +297,7 @@ In schema.ts at the top:
 /// <reference types="@sanity/types/parts" />
 ```
 
-Deploy to Vercel
+## Deploy to Vercel
 Install and configure Vercel CLI.
 $ npm i -g vercel
 In terminal, at the root of the project write:

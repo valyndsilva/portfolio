@@ -14,9 +14,9 @@ export default async function handler(
 ) {
   const skills: ISkills = await sanityClient.fetch(skillsQuery());
   // res.status(200).json({ skills });
-    try {
-      res.status(200).json({skills});
-    } catch (err: any) {
-      console.log("Error: ", err.message);
-    }
+  try {
+    res.status(200).json({ skills });
+  } catch (err: any) {
+    console.log("Error: ", err.message);
+  }
 }
