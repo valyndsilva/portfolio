@@ -6,11 +6,11 @@
 .pnp.js
 
 # sanity
-sanity-studio/node_modules
-sanity-studio/dist
-sanity-studio/coverage
-sanity-studio/logs
-sanity-studio/*.log
+/sanity-studio/node_modules
+/sanity-studio/dist
+/sanity-studio/coverage
+/sanity-studio/logs
+/sanity-studio/*.log
 
 # testing
 /coverage

@@ -13,5 +13,12 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   const hero: IHero = await sanityClient.fetch(heroQuery());
-  res.status(200).json({ hero });
+  // res.status(200).json({ hero });
+  try {
+    res.status(200).json({ hero });
+    /* eslint-disable */
+  } catch (err: any) {
+    // 👇️ This runs
+    console.log("Error: ", err.message);
+  }
 }
