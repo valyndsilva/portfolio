@@ -24,6 +24,9 @@ module.exports = {
     "@typescript-eslint/restrict-template-expressions": "off",
     "import/no-anonymous-default-export": "off",
     "no-undef": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "@typescript-eslint/no-unnecessary-boolean-literal-compare": "off",
+    "@next/next/no-img-element": "off",
   },
   settings: {
     react: {

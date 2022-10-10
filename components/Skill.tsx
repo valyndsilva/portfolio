@@ -10,6 +10,7 @@ export default function Skill({ skill }: Props) {
   return (
     <div className="group relative flex cursor-pointer justify-center items-center mb-5">
       <img
+        alt={skill?.title}
         src={urlFor(skill?.image.asset._ref).url()}
         className="rounded-xl border  dark:border-gray-500 object-contain w-28 h-28 md:w-32 md:h-32 xl:w-36 xl:h-36 filter group-hover:grayscale transition duration-300 ease-in-out shadow-md"
       />
