@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 
 interface Props {
-  /* eslint-disable */
   footerRef: any;
 }
 

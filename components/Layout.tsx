@@ -16,9 +16,8 @@ const Layout = ({ children }: Props) => {
         />
       </Head>
       <div className="flex flex-col h-screen  overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin  scrollbar-track-slate-500/20 scrollbar-thumb-teal-400/80 snap-y snap-mandatory">
-        {/* <Header /> */}
         <main className="flex-grow">{children}</main>
-        {/* <Footer /> */}
+
       </div>
     </>
   );

@@ -27,9 +27,9 @@ function SliderComp({ testimonials }: Props) {
     >
       {testimonials?.testimonialList?.map((testimonial, index) => (
         <SwiperSlide key={index}>
-          <div className="relative group opacity-70 hover:opacity-100 dark:opacity-40 dark:hover:opacity-100 flex flex-col w-[68vw] md:w-2/3 mx-auto  font-firacode m-10 cursor-pointer">
+          <div className=" relative group opacity-70 hover:opacity-100 dark:opacity-40 dark:hover:opacity-100 flex flex-col w-[68vw] md:w-2/3 mx-auto  font-firacode m-10 cursor-pointer">
             <div className="absolute -inset-0.5 bg-teal-400 opacity-0 rounded-lg blur-sm group-hover:opacity-100 group-hover:duration-200 transition duration-1000 "></div>
-            <div className="relative bg-teal-50  dark:bg-slate-800  shadow-md  items-center text-center p-10 rounded-lg h-[52vh] justify-center flex flex-col">
+            <div className="relative bg-white  dark:bg-slate-800  shadow-md border border-teal-200 dark:border-none items-center text-center p-10 rounded-lg h-[52vh] justify-center flex flex-col">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"

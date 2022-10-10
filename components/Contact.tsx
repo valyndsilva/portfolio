@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 
 interface Props {
   contact: IContact;
-  /* eslint-disable */
   contactRef: any;
 }
 
@@ -108,7 +107,7 @@ export default function Contact({ contact, contactRef }: Props) {
                   maxLength={25}
                   id="name"
                   name="name"
-                  className="w-full bg-teal-50 dark:bg-slate-900 bg-opacity-50 rounded-lg border text-base outline-none dark:text-slate-400 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out hover:border-teal-400 focus-visible:border-teal-400"
+                  className="w-full bg-white dark:bg-slate-900 bg-opacity-50 rounded-lg border text-base outline-none dark:text-slate-400 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out hover:border-teal-400 focus-visible:border-teal-400"
                 />
               </div>
             </div>
@@ -120,7 +119,7 @@ export default function Contact({ contact, contactRef }: Props) {
                   type={"email"}
                   id="email"
                   name="email"
-                  className="w-full bg-teal-50 dark:bg-slate-900 bg-opacity-50 rounded-lg border text-base outline-none dark:text-slate-400 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out hover:border-teal-400 focus-visible:border-teal-400"
+                  className="w-full bg-white dark:bg-slate-900 bg-opacity-50 rounded-lg border text-base outline-none dark:text-slate-400 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out hover:border-teal-400 focus-visible:border-teal-400"
                 />
               </div>
             </div>
@@ -132,7 +131,7 @@ export default function Contact({ contact, contactRef }: Props) {
                   type={"text"}
                   id="subject"
                   name="subject"
-                  className="w-full bg-teal-50 dark:bg-slate-900 bg-opacity-50 rounded-lg border text-base outline-none dark:text-slate-400 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out hover:border-teal-400 focus-visible:border-teal-400"
+                  className="w-full bg-white dark:bg-slate-900 bg-opacity-50 rounded-lg border text-base outline-none dark:text-slate-400 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out hover:border-teal-400 focus-visible:border-teal-400"
                 />
               </div>
             </div>
@@ -143,14 +142,14 @@ export default function Contact({ contact, contactRef }: Props) {
                   placeholder={contact.messagePlaceholder}
                   id="message"
                   name="message"
-                  className="w-full bg-teal-50 dark:bg-slate-900 bg-opacity-50 rounded-lg border text-base outline-none dark:text-slate-400 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out hover:border-teal-400 focus-visible:border-teal-400"
+                  className="w-full bg-white dark:bg-slate-900 bg-opacity-50 rounded-lg border text-base outline-none dark:text-slate-400 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out hover:border-teal-400 focus-visible:border-teal-400"
                 ></textarea>
               </div>
             </div>
             <div className="p-2 mx-auto">
               <button
                 type="submit"
-                className="flex border items-center justify-center text-center space-x-4 font-light text-sm font-firacode  shadow-md dark:border-teal-400 dark:text-teal-400 hover:border-teal-400 dark:hover:bg-slate-600 px-4 py-3 rounded-full"
+                className="flex border items-center justify-center text-center space-x-4 font-light text-sm font-firacode  shadow-md border-teal-400 hover:border-slate-600 dark:border-teal-400 dark:text-teal-400 dark:hover:border-teal-400 dark:hover:bg-slate-600 px-4 py-3 rounded-full"
               >
                 <BiPaperPlane className="w-5 h-5" />
                 <p>Send Message</p>

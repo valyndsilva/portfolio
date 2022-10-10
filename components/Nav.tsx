@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { useTheme } from "next-themes";
 import { BsFillSunFill, BsFillMoonStarsFill } from "react-icons/bs";
 import { RiServiceLine } from "react-icons/ri";
@@ -9,7 +9,6 @@ import { MdOutlineMiscellaneousServices, MdWorkOutline } from "react-icons/md";
 import { motion } from "framer-motion";
 
 interface Props {
-  /* eslint-disable */
   scrollTo: any;
   heroRef: any;
   aboutRef: any;
@@ -51,6 +50,9 @@ function Nav({
   contactRef,
 }: Props) {
   const { systemTheme, theme, setTheme } = useTheme();
+  useEffect(() => {
+    setTheme("dark"); // set theme to dark theme on load
+  }, []);
 
   const renderThemeChanger = () => {
     const currentTheme = theme === "system" ? systemTheme : theme;
@@ -72,7 +74,7 @@ function Nav({
   };
 
   return (
-    <nav className="fixed bottom-4  z-30 shadow-xl bg-slate-300 dark:bg-slate-600 px-5 py-3 rounded-full opacity-50 hover:opacity-100 transition ease-in duration-100">
+    <nav className="fixed bottom-4  z-30 shadow-xl bg-white dark:bg-slate-600 px-5 py-3 rounded-full opacity-50 hover:opacity-100 transition ease-in duration-100">
       <motion.div
         initial={{
           y: -300,

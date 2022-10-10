@@ -10,12 +10,14 @@ function MyApp({ Component, pageProps }: AppProps) {
     setMounted(true);
   }, []);
 
-  // Hide splash screen when we are server side
+  // Hide splash screen when we are server side after 4 seconds
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const loader = document.getElementById("globalLoader");
-      if (loader != null) loader.style.display = "none";
-    }
+    setTimeout(function () {
+      if (typeof window !== "undefined") {
+        const loader = document.getElementById("globalLoader");
+        if (loader != null) loader.style.display = "none";
+      }
+    }, 4000);
   }, []);
 
   if (!mounted) return null;

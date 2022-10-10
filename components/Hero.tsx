@@ -5,7 +5,6 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
 interface Props {
   hero: IHero;
-  /* eslint-disable */
   heroRef: any;
 }
 

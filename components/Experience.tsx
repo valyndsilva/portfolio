@@ -5,7 +5,6 @@ import ExperienceCard from "./ExperienceCard";
 
 interface Props {
   experience: IExperience;
-  /* eslint-disable */
   experienceRef: any;
 }
 
@@ -52,7 +51,7 @@ export default function Experience({ experience, experienceRef }: Props) {
             opacity: 1,
           }}
           viewport={{ once: false }}
-          className="mx-auto rounded flex  relative items-center space-x-5 p-10  text-left md:flex-row max-w-full w-full overflow-x-scroll overflow-y-hidden snap-x snap-mandatory  z-20 scrollbar-thin scrollbar-track-slate-500/20 scrollbar-thumb-teal-400/80"
+          className="mx-auto rounded flex relative items-center space-x-5 p-10  text-left md:flex-row max-w-full w-full overflow-x-scroll overflow-y-hidden snap-x snap-mandatory  z-20 scrollbar-thin scrollbar-track-slate-500/20 scrollbar-thumb-teal-400/80"
         >
           {experience.companyList
             ?.slice(0)

@@ -5,7 +5,6 @@ import Skill from "./Skill";
 
 interface Props {
   skills: ISkills;
-  /* eslint-disable */
   skillsRef: any;
 }
 
@@ -39,22 +38,25 @@ export default function skills({ skills, skillsRef }: Props) {
           </div>
         </motion.div>
 
-        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5 ">
-          {/* {skills?.technologies?.map((skill, index) => (
+        <motion.div
+          initial={{
+            x: -400,
+            opacity: 0,
+          }}
+          transition={{
+            duration: 1.2,
+          }}
+          whileInView={{
+            x: 0,
+            opacity: 1,
+          }}
+          viewport={{ once: false }}
+          className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5 "
+        >
+          {skills?.technologies?.map((skill, index) => (
             <Skill key={skill._id} skill={skill} />
-          ))} */}
-          {skills?.technologies
-            ?.slice(0, skills.technologies.length / 2)
-            .map((skill) => (
-              <Skill key={skill._id} skill={skill} />
-            ))}
-
-          {skills?.technologies
-            ?.slice(skills.technologies.length / 2, skills.technologies.length)
-            .map((skill) => (
-              <Skill key={skill._id} skill={skill} directionLeft />
-            ))}
-        </div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

@@ -10,7 +10,6 @@ import { motion } from "framer-motion";
 
 interface Props {
   portfolio: IPortfolio;
-  /* eslint-disable */
   portfolioRef: any;
 }
 
@@ -61,11 +60,11 @@ export default function Portfolio({ portfolio, portfolioRef }: Props) {
               opacity: 1,
             }}
             viewport={{ once: false }}
-            className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-slate-500/20 scrollbar-thumb-teal-400/80 cursor-pointer"
+            className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-slate-500/20 scrollbar-thumb-teal-400/80 cursor-pointer "
           >
             {portfolio.projectList?.map((item, index) => (
               <div
-                className="w-full h-fit flex-shrink-0 snap-center items-center justify-center   rounded-lg"
+                className="w-full h-fit flex-shrink-0 snap-center items-center justify-center rounded-lg"
                 key={item._id}
               >
                 <div className="w-full flex-row lg:flex p-8 lg:p-0 bg-teal-50 shadow-md  lg:bg-transparent dark:bg-slate-800 rounded-lg lg:dark:bg-transparent lg:rounded-xs z-0">
@@ -133,13 +132,13 @@ export default function Portfolio({ portfolio, portfolioRef }: Props) {
                     </div>
                     <div className="flex space-x-8">
                       <Link href={item.githubLink}>
-                        <button className="flex border space-x-4 font-light text-sm font-firacode  shadow-md dark:border-teal-400 dark:text-teal-400 hover:border-teal-400 dark:hover:bg-slate-600 px-4 py-3 rounded-full ">
+                        <button className="flex border space-x-4 font-light text-sm font-firacode  shadow-md border-teal-400 hover:border-slate-600 dark:border-teal-400 dark:text-teal-400 dark:hover:border-teal-400 dark:hover:bg-slate-600 px-4 py-3 rounded-full ">
                           <FiGithub className="w-5 h-5" />
                           <p>Github Repo</p>
                         </button>
                       </Link>
                       <Link href={item.demoLink}>
-                        <button className="flex border space-x-4 font-light text-sm font-firacode  shadow-md dark:border-teal-400 dark:text-teal-400 hover:border-teal-400 dark:hover:bg-slate-600 px-4 py-3 rounded-full ">
+                        <button className="flex border space-x-4 font-light text-sm font-firacode  shadow-md border-teal-400 hover:border-slate-600 dark:border-teal-400 dark:text-teal-400 dark:hover:border-teal-400 dark:hover:bg-slate-600 px-4 py-3 rounded-full ">
                           <BiLink className="w-5 h-5" />
                           <p>Live Demo</p>
                         </button>

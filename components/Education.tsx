@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 
 interface Props {
   education: IEducation;
-  /* eslint-disable */
   educationRef: any;
 }
 

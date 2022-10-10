@@ -23,7 +23,7 @@ export default function ExperienceCard({ item }: Props) {
       <div className="absolute -inset-0.5 bg-teal-400 opacity-0 rounded-lg blur-sm group-hover:opacity-100 group-hover:duration-200 transition duration-1000"></div>
 
       <div
-        className="bg-teal-50 dark:bg-slate-800  shadow-md  relative rounded-lg space-y-7 p-10 h-fit lg:h-[52vh] w-[65vw] xl:w-[40vw] justify-center flex flex-col"
+        className="bg-white border border-teal-200 dark:border-none dark:bg-slate-800  shadow-md  relative rounded-lg space-y-7 p-10 h-fit lg:h-[52vh] w-[65vw] xl:w-[40vw] justify-center flex flex-col"
         key={item.jobId}
       >
         <div className="px-0">

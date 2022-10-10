@@ -7,7 +7,6 @@ import { urlFor } from "../lib/sanity";
 
 interface Props {
   about: IAbout;
-  /* eslint-disable */
   aboutRef: any;
 }
 

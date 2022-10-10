@@ -12,7 +12,6 @@ export { default as Social } from "./Social";
 export { default as Footer } from "./Footer";
 export { default as SideNav } from "./SideNav";
 export { default as Nav } from "./Nav";
-export { default as ToggleButton } from "./ToggleButton";
 export { default as Layout } from "./Layout";
 export { default as SliderComp } from "./SliderComp";
 export { default as Skills } from "./Skills";
